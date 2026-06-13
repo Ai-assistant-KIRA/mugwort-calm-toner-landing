@@ -2,19 +2,27 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mugwort Calm Hydrating Toner &mdash; Baltic Bloom</title>
   <meta name="description" content="Lightweight calming mugwort toner for sensitive skin. Soothe redness, hydrate deeply, strengthen your barrier." />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="theme-color" content="#4a6b58" />
+  <link rel="icon" href="assets/hy-01-packshot.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="assets/hy-01-packshot.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mugwort Calm Hydrating Toner &mdash; Baltic Bloom" />
+  <meta property="og:description" content="Lightweight calming mugwort toner for sensitive skin. Soothe redness, hydrate deeply, strengthen your barrier." />
+  <meta property="og:image" content="https://ai-assistant-kira.github.io/mugwort-calm-toner-landing/assets/hy-01-packshot.jpg" />
+  <meta property="og:url" content="https://ai-assistant-kira.github.io/mugwort-calm-toner-landing/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,400&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
-  <script>
+  <script src="https://cdn.tailwindcss.com"></script>
+<script>
     tailwind.config = {
       theme: {
         extend: {
@@ -48,8 +56,7 @@
     .acc-icon { transition: transform 0.3s ease; }
     .marquee-track { animation: marquee 28s linear infinite; }
     @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .ticker-track { animation: ticker 35s linear infinite; }
-    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
     .benefit-slide { display: none; }
     .benefit-slide.is-active { display: block; }
     .result-slide { display: none; }
@@ -129,10 +136,70 @@
     .bb-locale-panel button:hover { background: rgba(255,255,255,0.06); }
     .bb-locale-wrap { position: relative; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  
+    /* Layout */
+    .section-pad { padding: clamp(4rem, 8vw, 6.5rem) 0; }
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 300; padding: 0.75rem 1rem; background: #1a1a1a; color: #fff; text-decoration: none; font-size: 0.875rem; }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3.25rem; padding: 0 1.5rem; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease; }
+    .btn:focus-visible { outline: 2px solid #9ec5b0; outline-offset: 2px; }
+    .btn-primary { background: #1a1a1a; color: #fff; border: 1px solid #1a1a1a; }
+    .btn-primary:hover { background: #4a6b58; border-color: #4a6b58; }
+    .btn-outline { background: transparent; color: #1a1a1a; border: 1px solid #1a1a1a; }
+    .btn-outline:hover { background: #1a1a1a; color: #fff; }
+
+    /* Carousels */
+    .carousel-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 2.75rem; min-height: 2.75rem; width: 2.75rem; height: 2.75rem; border-radius: 9999px; background: #fff; transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+    .carousel-btn:hover { background: #f3efe8; transform: translateY(-1px); }
+    .carousel-btn:focus-visible { outline: 2px solid #4a6b58; outline-offset: 2px; }
+
+    /* Trust badges */
+    .trust-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.65rem 1.25rem; list-style: none; margin: 0; padding: 0; }
+    .trust-badges li { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #4a4a4a; font-weight: 500; padding: 0.35rem 0; }
+
+    /* Routine — hero panel */
+    .routine-panel { border: 1px solid #e8e8e8; border-radius: 4px; padding: 1.25rem 1.35rem; background: #fff; }
+    .routine-row { display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 0.85rem; padding: 0.85rem 0.65rem; border-radius: 4px; text-decoration: none; color: inherit; transition: background-color 0.2s ease; }
+    .routine-row + .routine-row { border-top: 1px solid #e8e8e8; }
+    .routine-row:hover { background: #faf8f5; }
+    .routine-row__step { width: 1.5rem; height: 1.5rem; border-radius: 9999px; background: #e8f0eb; color: #4a6b58; font-size: 0.68rem; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; }
+    .routine-row__thumb { width: 4rem; height: 4rem; border-radius: 4px; overflow: hidden; flex-shrink: 0; border: 1px solid #e8e8e8; }
+    .routine-row__arrow { color: #b8956a; font-size: 1.1rem; opacity: 0; transform: translateX(-4px); transition: opacity 0.2s ease, transform 0.2s ease; }
+    .routine-row:hover .routine-row__arrow { opacity: 1; transform: translateX(0); }
+
+    /* Routine — cards */
+    .routine-card { display: flex; flex-direction: column; border: 1px solid #e8e8e8; border-radius: 4px; background: #fff; overflow: hidden; transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease; }
+    .routine-card:hover { box-shadow: 0 12px 32px rgba(26,26,26,0.08); transform: translateY(-2px); }
+    .routine-card--featured { border-color: #9ec5b0; box-shadow: 0 8px 24px rgba(74,107,88,0.12); }
+    .routine-card__media { position: relative; aspect-ratio: 1; overflow: hidden; background: #f7f3ee; }
+    .routine-card__badge { position: absolute; top: 0.85rem; left: 0.85rem; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; background: rgba(255,255,255,0.94); padding: 0.35rem 0.55rem; border-radius: 2px; }
+    .routine-card__body { padding: 1.35rem 1.25rem 1.5rem; text-align: center; flex: 1; display: flex; flex-direction: column; }
+
+    /* Reviews */
+    .reviews-lead { margin: 0; padding: 1.5rem; background: #fff; border: 1px solid #e8e8e8; border-radius: 4px; }
+    .reviews-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
+    .reviews-tags li { font-size: 0.8rem; padding: 0.45rem 0.75rem; background: #e8f0eb; color: #4a6b58; border-radius: 9999px; }
+
+    /* Before/after pair buttons */
+    .ba-pair-btn { width: 2.75rem; height: 2.75rem; border-radius: 9999px; border: 2px solid #e8e8e8; background: #fff; cursor: pointer; transition: border-color 0.2s ease, background-color 0.2s ease; }
+    .ba-pair-btn.is-active { background: #1a1a1a; border-color: #1a1a1a; }
+    .ba-pair-btn:focus-visible { outline: 2px solid #4a6b58; outline-offset: 2px; }
+
+    /* Demo note */
+    .demo-note { font-size: 0.72rem; color: rgba(255,255,255,0.38); font-style: italic; }
+
+    /* Modal */
+    .modal[hidden] { display: none !important; }
+
+    /* Focus */
+    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid #4a6b58; outline-offset: 2px; }
+
   </style>
-  <script>const M = 'assets/';</script>
 </head>
 <body class="bg-white text-ink antialiased">
+  <a href="#shop" class="skip-link">Skip to product</a>
 
   <!-- Announcement -->
   <div class="bg-ink text-white/90 text-[0.68rem] tracking-[0.12em] uppercase py-2 text-center font-medium">Free Standard Shipping on Orders Over &euro;50</div>
@@ -145,7 +212,7 @@
       </button>
       <a href="#" class="font-ui text-[0.72rem] font-medium tracking-[0.2em] uppercase text-ink">Baltic Bloom</a>
       <div class="justify-self-end flex items-center gap-1">
-        <a href="#reviews" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-stone" aria-label="Search"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke-width="1.5"/><path stroke-width="1.5" d="M20 20l-3-3"/></svg></a>
+        <a href="#reviews" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-stone transition-colors" aria-label="View customer reviews"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke-width="1.5"/><path stroke-width="1.5" d="M20 20l-3-3"/></svg></a>
         <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-stone relative" aria-label="Cart">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1" fill="currentColor"/><circle cx="18" cy="20" r="1" fill="currentColor"/></svg>
           <span class="absolute top-0.5 right-0.5 bg-mint-dark text-white text-[0.58rem] w-4 h-4 rounded-full flex items-center justify-center">0</span>
@@ -155,14 +222,14 @@
   </header>
 
   <!-- Mobile drawer -->
-  <div id="drawer" class="fixed inset-0 z-[200] pointer-events-none">
+  <div id="drawer" class="fixed inset-0 z-[200] pointer-events-none" aria-hidden="true">
     <div id="drawer-overlay" class="absolute inset-0 bg-black/40 opacity-0 transition-opacity"></div>
     <div id="drawer-panel" class="absolute top-0 left-0 w-[min(22rem,90vw)] h-full bg-white -translate-x-full transition-transform p-8 overflow-y-auto">
       <div class="flex justify-between items-center mb-5">
         <span class="font-display text-xl">Baltic Bloom</span>
-        <button id="menu-close" aria-label="Close menu">&times;</button>
+        <button id="menu-close" type="button" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-2xl leading-none" aria-label="Close menu">&times;</button>
       </div>
-      <nav class="space-y-0">
+      <nav class="space-y-0" aria-label="Mobile navigation">
         <a href="#shop" class="block py-3.5 text-sm uppercase tracking-wide border-b border-border">Shop</a>
         <a href="#benefits" class="block py-3.5 text-sm uppercase tracking-wide border-b border-border">Benefits</a>
         <a href="#results" class="block py-3.5 text-sm uppercase tracking-wide border-b border-border">Results</a>
@@ -181,12 +248,12 @@
       <div class="bg-gradient-to-br from-champagne to-[#ebe4d9] relative">
         <div class="grid lg:grid-cols-[60px_1fr] gap-3 p-3.5 lg:p-5 h-full">
           <div class="hidden lg:flex flex-col gap-2.5">
-            <button class="thumb is-active w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="0" aria-label="Packshot"><img src="assets/hy-01-packshot.jpg" alt="" width="60" height="68" loading="eager" /></button>
-            <button class="thumb w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="1" aria-label="Texture"><img src="assets/hy-02-texture.jpg" alt="" width="60" height="68" loading="lazy" /></button>
-            <button class="thumb w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="2" aria-label="Lifestyle"><img src="assets/hy-03-lifestyle.jpg" alt="" width="60" height="68" loading="lazy" /></button>
-            <button class="thumb w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="3" aria-label="Application video"><img src="assets/hy-04-application-frame.jpg" alt="" width="60" height="68" loading="lazy" /></button>
+            <button class="thumb is-active w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="0" aria-label="View packshot"><img src="assets/hy-01-packshot.jpg" alt="Mugwort Calm Toner bottle thumbnail" width="60" height="68" loading="eager" /></button>
+            <button class="thumb w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="1" aria-label="View texture close-up"><img src="assets/hy-02-texture.jpg" alt="Toner texture swatch thumbnail" width="60" height="68" loading="lazy" /></button>
+            <button class="thumb w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="2" aria-label="View lifestyle image"><img src="assets/hy-03-lifestyle.jpg" alt="Model holding toner thumbnail" width="60" height="68" loading="lazy" /></button>
+            <button class="thumb w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="3" aria-label="View application video"><img src="assets/hy-04-application-frame.jpg" alt="Application demo video thumbnail" width="60" height="68" loading="lazy" /></button>
           </div>
-          <div class="relative h-96 sm:h-[28rem] lg:h-[34rem] rounded overflow-hidden bg-white">
+          <div class="relative h-96 sm:h-[28rem] lg:h-[34rem] rounded overflow-hidden bg-white" role="region" aria-roledescription="carousel" aria-label="Product gallery">
             <div class="gallery-slide gallery-slide--packshot is-active absolute inset-0">
               <img src="assets/hy-01-packshot.jpg" alt="Mugwort Calm Hydrating Toner &mdash; frosted sage green bottle packshot" width="1600" height="2000" loading="eager" />
             </div>
@@ -200,13 +267,13 @@
               <video src="assets/hy-04-application.mp4" poster="assets/hy-04-application-frame.jpg" autoplay loop muted playsinline aria-label="Models applying the calming toner"></video>
             </div>
             <div class="lg:hidden absolute inset-0 flex justify-between items-center px-2 pointer-events-none">
-              <button class="gallery-prev pointer-events-auto w-10 h-10 bg-white/80 rounded-full" aria-label="Previous">&lsaquo;</button>
-              <button class="gallery-next pointer-events-auto w-10 h-10 bg-white/80 rounded-full" aria-label="Next">&rsaquo;</button>
+              <button class="gallery-prev carousel-btn pointer-events-auto bg-white/80 rounded-full" aria-label="Previous">&lsaquo;</button>
+              <button class="gallery-next carousel-btn pointer-events-auto bg-white/80 rounded-full" aria-label="Next">&rsaquo;</button>
             </div>
             <div class="hidden lg:flex absolute bottom-4 left-1/2 -translate-x-1/2 items-center gap-4 bg-white/95 px-4 py-2 rounded-full shadow border border-border text-sm">
-              <button class="gallery-prev" aria-label="Previous">&lsaquo;</button>
+              <button class="gallery-prev carousel-btn" aria-label="Previous">&lsaquo;</button>
               <span id="gallery-count">1/4</span>
-              <button class="gallery-next" aria-label="Next">&rsaquo;</button>
+              <button class="gallery-next carousel-btn" aria-label="Next">&rsaquo;</button>
             </div>
           </div>
         </div>
@@ -237,7 +304,7 @@
 
         <p class="text-[1.2rem] lg:text-[1.45rem] font-medium mb-5">&euro;24,90</p>
 
-        <button class="w-full min-h-[52px] bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium hover:bg-mint-dark transition mb-1">Add to Bag &mdash; &euro;24,90</button>
+        <button class="btn btn-primary w-full mb-1" aria-label="Add Mugwort Calm Hydrating Toner to bag">Add to Bag &mdash; &euro;24,90</button>
 
         <!-- Accordions -->
         <details class="border-t border-ink group" open>
@@ -282,22 +349,40 @@
         </details>
 
         <!-- Complete The Routine (hero) -->
-        <div class="mt-7 border border-border rounded-sm p-5 bg-white">
-          <p class="text-base uppercase tracking-wider mb-3">Complete The Routine</p>
-          <a href="#" class="flex gap-3 items-center py-2 text-inherit no-underline">
-            <div class="w-16 h-16 rounded-sm shrink-0 overflow-hidden"><img src="assets/hy-20-routine-cleanser.jpg" alt="Balancing Cream Cleanser" class="media-cover" width="64" height="64" loading="lazy" /></div>
-            <div>
-              <strong class="block text-[0.95rem]">Balancing Cream Cleanser</strong>
-              <span class="text-[0.9rem] text-muted">Gentle, clarifying cream-to-foam cleanser &middot; &euro;32,00</span>
-            </div>
-          </a>
-          <a href="#" class="flex gap-3 items-center py-2 border-t border-border text-inherit no-underline">
-            <div class="w-16 h-16 rounded-sm shrink-0 overflow-hidden"><img src="assets/hy-19-routine-serum.jpg" alt="Artemisia Calming Serum" class="media-cover" width="64" height="64" loading="lazy" /></div>
-            <div>
-              <strong class="block text-[0.95rem]">Artemisia Calming Serum</strong>
-              <span class="text-[0.9rem] text-muted">Soothing barrier serum &middot; &euro;48,00</span>
-            </div>
-          </a>
+        <div class="mt-8 routine-panel">
+          <div class="flex items-baseline justify-between gap-4 mb-4">
+            <p class="text-sm uppercase tracking-[0.14em] font-medium text-ink">Complete The Routine</p>
+            <a href="#routine" class="text-xs uppercase tracking-wider text-mint-dark hover:underline underline-offset-4">View all</a>
+          </div>
+          <div class="space-y-3">
+            <a href="#routine" class="routine-row group">
+              <span class="routine-row__step" aria-hidden="true">1</span>
+              <div class="routine-row__thumb"><img src="assets/hy-20-routine-cleanser.jpg" alt="Balancing Cream Cleanser bottle" class="media-cover" width="64" height="64" loading="lazy" decoding="async" /></div>
+              <div class="routine-row__copy">
+                <strong class="block text-[0.95rem] group-hover:text-mint-dark transition-colors">Balancing Cream Cleanser</strong>
+                <span class="text-[0.88rem] text-muted">Gentle cream-to-foam &middot; &euro;32,00</span>
+              </div>
+              <span class="routine-row__arrow" aria-hidden="true">&rsaquo;</span>
+            </a>
+            <a href="#routine" class="routine-row group">
+              <span class="routine-row__step" aria-hidden="true">2</span>
+              <div class="routine-row__thumb"><img src="assets/hy-01-packshot.jpg" alt="Mugwort Calm Hydrating Toner bottle" class="media-cover" width="64" height="64" loading="lazy" decoding="async" /></div>
+              <div class="routine-row__copy">
+                <strong class="block text-[0.95rem] group-hover:text-mint-dark transition-colors">Mugwort Calm Hydrating Toner</strong>
+                <span class="text-[0.88rem] text-muted">Lightweight soothing toner &middot; &euro;24,90</span>
+              </div>
+              <span class="routine-row__arrow" aria-hidden="true">&rsaquo;</span>
+            </a>
+            <a href="#routine" class="routine-row group">
+              <span class="routine-row__step" aria-hidden="true">3</span>
+              <div class="routine-row__thumb"><img src="assets/hy-19-routine-serum.jpg" alt="Artemisia Calming Serum bottle" class="media-cover" width="64" height="64" loading="lazy" decoding="async" /></div>
+              <div class="routine-row__copy">
+                <strong class="block text-[0.95rem] group-hover:text-mint-dark transition-colors">Artemisia Calming Serum</strong>
+                <span class="text-[0.88rem] text-muted">Barrier-supporting serum &middot; &euro;48,00</span>
+              </div>
+              <span class="routine-row__arrow" aria-hidden="true">&rsaquo;</span>
+            </a>
+          </div>
         </div>
 
         <!-- Customer quote -->
@@ -309,14 +394,14 @@
           </div>
         </div>
 
-        <button class="w-full min-h-[52px] mt-6 bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium hover:bg-mint-dark transition lg:hidden">Add to Bag &mdash; &euro;24,90</button>
+        <button class="btn btn-primary w-full mt-6 lg:hidden" aria-label="Add Mugwort Calm Hydrating Toner to bag">Add to Bag &mdash; &euro;24,90</button>
       </div>
     </div>
   </section>
 
   <!-- Chapter nav trigger (mobile) -->
   <div class="fixed bottom-5 left-4 z-40 lg:hidden">
-    <button id="chapters-toggle-m" class="bg-white shadow-lg px-4 py-2.5 text-sm uppercase tracking-wide flex items-center gap-2 rounded">
+    <button id="chapters-toggle-m" class="bg-white shadow-lg px-4 py-3 min-h-[44px] text-sm uppercase tracking-wide flex items-center gap-2 rounded transition-shadow hover:shadow-xl" aria-expanded="false" aria-controls="chapters-panel" aria-label="Open page chapters menu">
       <span>chapters</span> &#9662;
     </button>
   </div>
@@ -340,12 +425,12 @@
   </section>
 
   <!-- ═══════════════════ LARGE BENEFITS ═══════════════════ -->
-  <section id="benefits" class="bg-white py-16 lg:py-24">
+  <section id="benefits" class="section-pad bg-white">
     <div class="max-w-page mx-auto px-4 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div>
           <p class="text-xs font-semibold uppercase tracking-[0.2em] mb-4">Benefits</p>
-          <div id="benefits-carousel">
+          <div id="benefits-carousel" aria-live="polite" aria-atomic="true">
             <div class="benefit-slide is-active">
               <h2 class="font-display text-3xl lg:text-5xl font-light mb-4">Soothes Visible Redness</h2>
               <p class="text-lg text-dark leading-relaxed">Ganghwa mugwort and centella help calm flare-ups, heat-prone cheeks, and post-cleanse tightness without stripping.</p>
@@ -360,9 +445,9 @@
             </div>
           </div>
           <div class="flex items-center gap-4 mt-8">
-            <button class="benefit-prev w-10 h-10 border border-border rounded-full" aria-label="Previous benefit">&lsaquo;</button>
+            <button class="benefit-prev carousel-btn border border-border rounded-full" aria-label="Previous benefit">&lsaquo;</button>
             <span id="benefit-count" class="text-sm tracking-wider">1/3</span>
-            <button class="benefit-next w-10 h-10 border border-border rounded-full" aria-label="Next benefit">&rsaquo;</button>
+            <button class="benefit-next carousel-btn border border-border rounded-full" aria-label="Next benefit">&rsaquo;</button>
           </div>
         </div>
         <div class="aspect-[4/5] rounded-sm overflow-hidden border border-border">
@@ -373,14 +458,14 @@
   </section>
 
   <!-- ═══════════════════ THE RESULTS ═══════════════════ -->
-  <section id="results" class="bg-stone py-16 lg:py-24">
+  <section id="results" class="section-pad bg-stone">
     <div class="max-w-page mx-auto px-4 lg:px-8">
       <p class="text-xs font-semibold uppercase tracking-[0.2em] text-center mb-3">The Results</p>
       <h2 class="font-display text-3xl lg:text-5xl font-light text-center mb-12">Clinically measured calm</h2>
 
       <div class="grid lg:grid-cols-2 gap-10">
         <div>
-          <div id="results-carousel">
+          <div id="results-carousel" aria-live="polite" aria-atomic="true">
             <div class="result-slide is-active">
               <h3 class="font-display text-2xl mb-2">Locks in Hydration</h3>
               <p class="text-4xl lg:text-5xl font-light mb-4">100% <span class="text-lg text-muted">felt more hydrated</span></p>
@@ -398,9 +483,9 @@
             </div>
           </div>
           <div class="flex items-center gap-4 mt-8">
-            <button class="result-prev w-10 h-10 border border-border rounded-full bg-white" aria-label="Previous">&lsaquo;</button>
+            <button class="result-prev carousel-btn border border-border rounded-full bg-white" aria-label="Previous">&lsaquo;</button>
             <span id="result-count" class="text-sm">1/3</span>
-            <button class="result-next w-10 h-10 border border-border rounded-full bg-white" aria-label="Next">&rsaquo;</button>
+            <button class="result-next carousel-btn border border-border rounded-full bg-white" aria-label="Next">&rsaquo;</button>
           </div>
         </div>
 
@@ -418,9 +503,9 @@
             <div class="absolute top-3 right-3 text-[0.65rem] uppercase tracking-wider bg-white/90 px-2 py-1">After</div>
           </div>
           <div class="flex justify-center gap-2">
-            <button class="ba-pair-btn w-2.5 h-2.5 rounded-full bg-ink" data-pair="0" aria-label="Results pair 1"></button>
-            <button class="ba-pair-btn w-2.5 h-2.5 rounded-full bg-border" data-pair="1" aria-label="Results pair 2"></button>
-            <button class="ba-pair-btn w-2.5 h-2.5 rounded-full bg-border" data-pair="2" aria-label="Results pair 3"></button>
+            <button class="ba-pair-btn is-active" aria-pressed="true" data-pair="0" aria-label="Results pair 1"></button>
+            <button class="ba-pair-btn" aria-pressed="false" data-pair="1" aria-label="Results pair 2"></button>
+            <button class="ba-pair-btn" aria-pressed="false" data-pair="2" aria-label="Results pair 3"></button>
           </div>
           <p class="text-sm text-muted text-center">4-week consumer study &mdash; hydration, redness &amp; texture improvement.</p>
         </div>
@@ -429,10 +514,10 @@
   </section>
 
   <!-- Trial modal -->
-  <div id="trial-modal" class="modal fixed inset-0 z-[120] items-center justify-center p-4 bg-black/50">
+  <div id="trial-modal" class="modal fixed inset-0 z-[120] items-center justify-center p-4 bg-black/50" role="dialog" aria-modal="true" aria-labelledby="trial-modal-title" hidden>
     <div class="bg-white max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 rounded-sm relative">
       <button class="modal-close absolute top-4 right-4 text-2xl" aria-label="Close">&times;</button>
-      <h3 class="font-display text-2xl mb-6">Full Trial Results</h3>
+      <h3 id="trial-modal-title" class="font-display text-2xl mb-6">Full Trial Results</h3>
       <p class="text-xs uppercase tracking-wider text-muted mb-4">Clinically Proven Results*</p>
       <div class="space-y-6 text-sm leading-relaxed text-dark">
         <div>
@@ -458,7 +543,7 @@
 
   <!-- ═══════════════════ BREAKTHROUGH SCIENCE ═══════════════════ -->
   <section id="science" class="relative bg-mint-dark text-white py-20 lg:py-28 overflow-hidden">
-    <div class="absolute inset-0 opacity-30"><img src="assets/hy-12-science.jpg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
+    <div class="absolute inset-0 opacity-30" aria-hidden="true"><img src="assets/hy-12-science.jpg" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" /></div>
     <div class="absolute inset-0 bg-mint-dark/75"></div>
     <div class="max-w-page mx-auto px-4 lg:px-8 relative grid lg:grid-cols-2 gap-10 items-center">
       <div class="aspect-video lg:aspect-square rounded-sm overflow-hidden border border-white/20 shadow-2xl">
@@ -473,17 +558,17 @@
     </div>
   </section>
 
-  <!-- Claims ticker -->
-  <section class="py-4 overflow-hidden border-y border-border bg-white">
-    <div class="ticker-track flex whitespace-nowrap w-max text-[0.78rem] uppercase tracking-[0.14em] text-muted font-medium">
-      <span class="mx-6">Vegan</span><span class="mx-6">Cruelty-free</span><span class="mx-6">Fragrance-free</span><span class="mx-6">Sensitive skin-safe</span><span class="mx-6">Dermatologist-tested</span><span class="mx-6">Non-comedogenic</span><span class="mx-6">Clean</span>
-      <span class="mx-6">Vegan</span><span class="mx-6">Cruelty-free</span><span class="mx-6">Fragrance-free</span><span class="mx-6">Sensitive skin-safe</span><span class="mx-6">Dermatologist-tested</span><span class="mx-6">Non-comedogenic</span><span class="mx-6">Clean</span>
-      <span class="mx-6">Vegan</span><span class="mx-6">Cruelty-free</span><span class="mx-6">Fragrance-free</span><span class="mx-6">Sensitive skin-safe</span><span class="mx-6">Dermatologist-tested</span><span class="mx-6">Non-comedogenic</span><span class="mx-6">Clean</span>
+  <!-- Trust badges -->
+  <section class="py-5 lg:py-6 border-y border-border bg-white" aria-label="Product certifications">
+    <div class="max-w-page mx-auto px-4 lg:px-8">
+      <ul class="trust-badges">
+        <li>Vegan</li><li>Cruelty-free</li><li>Fragrance-free</li><li>Sensitive skin-safe</li><li>Dermatologist-tested</li><li>Non-comedogenic</li><li>Clean formula</li>
+      </ul>
     </div>
   </section>
 
   <!-- ═══════════════════ KEY INGREDIENTS ═══════════════════ -->
-  <section id="ingredients" class="py-16 lg:py-24 bg-offwhite" style="background:#faf8f5">
+  <section id="ingredients" class="section-pad bg-cream">
     <div class="max-w-page mx-auto px-4 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
         <div class="aspect-square rounded-sm overflow-hidden border border-border">
@@ -511,7 +596,7 @@
             <summary class="flex justify-between cursor-pointer list-none font-display text-xl"><span>Microbiome Balance Complex</span><span class="acc-icon text-muted">+</span></summary>
             <p class="pt-3 text-dark leading-relaxed">Helps rebalance and soothe blemish-prone, reactive skin without disrupting your routine.</p>
           </details>
-          <button id="inci-toggle" class="mt-6 text-sm uppercase tracking-wider underline underline-offset-4">See full ingredients list</button>
+          <button id="inci-toggle" type="button" class="mt-6 text-sm uppercase tracking-wider underline underline-offset-4" aria-expanded="false" aria-controls="inci-full">See full ingredients list</button>
           <div id="inci-full" class="hidden mt-4 p-5 bg-white border border-border text-sm leading-relaxed text-dark rounded-sm">
             Water, Artemisia Princeps Extract, Centella Asiatica Extract, Glycerin, Panthenol, Butylene Glycol, 1,2-Hexanediol, Lactobacillus Ferment, Ethylhexylglycerin, Citric Acid.
           </div>
@@ -521,7 +606,7 @@
   </section>
 
   <!-- Community -->
-  <section id="community" class="py-16 lg:py-24 bg-white">
+  <section id="community" class="section-pad bg-white">
     <div class="max-w-page mx-auto px-4 lg:px-8 text-center mb-10">
       <p class="text-xs uppercase tracking-[0.2em] text-muted mb-2">Baltic Bloom + You</p>
       <h2 class="font-display text-3xl lg:text-4xl font-light mb-3">The Community</h2>
@@ -554,7 +639,7 @@
   </section>
 
   <!-- ═══════════════════ FAQ ═══════════════════ -->
-  <section id="faq" class="py-16 lg:py-24 bg-stone">
+  <section id="faq" class="section-pad bg-stone">
     <div class="max-w-page mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-10">
       <div class="aspect-[4/5] rounded-sm hidden lg:block overflow-hidden border border-border">
         <img src="assets/hy-17-faq.jpg" alt="Calming product shot for FAQ section" class="media-cover" width="640" height="800" loading="lazy" />
@@ -586,73 +671,91 @@
     </div>
   </section>
 
-  <!-- Complete The Routine (bottom carousel) -->
-  <section id="routine" class="py-16 lg:py-24 bg-white border-t border-border">
+  <!-- Complete The Routine -->
+  <section id="routine" class="section-pad bg-white border-t border-border">
     <div class="max-w-page mx-auto px-4 lg:px-8">
-      <h2 class="font-display text-3xl lg:text-4xl font-light text-center mb-10">Complete The Routine</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <article class="text-center group">
-          <div class="aspect-square rounded-sm mb-4 relative overflow-hidden">
-            <img src="assets/hy-20-routine-cleanser.jpg" alt="Balancing Cream Cleanser" class="media-cover" width="400" height="400" loading="lazy" />
-            <span class="absolute top-3 left-3 text-[0.65rem] uppercase tracking-wider bg-white px-2 py-1">Balance</span>
+      <div class="text-center max-w-2xl mx-auto mb-12 lg:mb-14">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted mb-3">Three steps</p>
+        <h2 class="font-display text-3xl lg:text-4xl font-light mb-4">Complete The Routine</h2>
+        <p class="text-dark leading-relaxed">Cleanse, calm, and strengthen &mdash; a simple ritual designed for sensitive, reactive skin.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <article class="routine-card group">
+          <div class="routine-card__media">
+            <img src="assets/hy-20-routine-cleanser.jpg" alt="Balancing Cream Cleanser in sage-green packaging" class="media-cover" width="400" height="400" loading="lazy" decoding="async" />
+            <span class="routine-card__badge">Step 1 &middot; Balance</span>
           </div>
-          <h3 class="font-display text-xl mb-1">Balancing Cream Cleanser</h3>
-          <p class="text-sm text-muted mb-2">Gentle, clarifying cream-to-foam cleanser</p>
-          <p class="font-medium mb-4">&euro;32,00</p>
-          <button class="min-h-[44px] px-6 border border-ink text-xs uppercase tracking-wider hover:bg-ink hover:text-white transition">Quick Shop</button>
+          <div class="routine-card__body">
+            <h3 class="font-display text-xl mb-2">Balancing Cream Cleanser</h3>
+            <p class="text-sm text-muted mb-4 leading-relaxed">Gentle, clarifying cream-to-foam cleanser that lifts impurities without stripping.</p>
+            <p class="font-medium mb-5">&euro;32,00</p>
+            <button type="button" class="btn btn-outline w-full" aria-label="Quick shop Balancing Cream Cleanser">Quick Shop</button>
+          </div>
         </article>
-        <article class="text-center group">
-          <div class="aspect-square rounded-sm mb-4 relative overflow-hidden">
-            <img src="assets/hy-19-routine-serum.jpg" alt="Artemisia Calming Serum" class="media-cover" width="400" height="400" loading="lazy" />
-            <span class="absolute top-3 left-3 text-[0.65rem] uppercase tracking-wider bg-white px-2 py-1">Activate</span>
+        <article class="routine-card routine-card--featured group">
+          <div class="routine-card__media">
+            <img src="assets/hy-01-packshot.jpg" alt="Mugwort Calm Hydrating Toner frosted sage bottle" class="media-cover" width="400" height="400" loading="lazy" decoding="async" />
+            <span class="routine-card__badge">Step 2 &middot; Calm</span>
           </div>
-          <h3 class="font-display text-xl mb-1">Artemisia Calming Serum</h3>
-          <p class="text-sm text-muted mb-2">Barrier-supporting soothing serum</p>
-          <p class="font-medium mb-4">&euro;48,00</p>
-          <button class="min-h-[44px] px-6 border border-ink text-xs uppercase tracking-wider hover:bg-ink hover:text-white transition">Quick Shop</button>
+          <div class="routine-card__body">
+            <h3 class="font-display text-xl mb-2">Mugwort Calm Hydrating Toner</h3>
+            <p class="text-sm text-muted mb-4 leading-relaxed">Lightweight soothing toner that preps skin and locks in hydration.</p>
+            <p class="font-medium mb-5">&euro;24,90</p>
+            <button type="button" class="btn btn-primary w-full" aria-label="Add Mugwort Calm Hydrating Toner to bag">Add to Bag</button>
+          </div>
         </article>
-        <article class="text-center group">
-          <div class="aspect-square rounded-sm mb-4 relative overflow-hidden">
-            <img src="assets/hy-01-packshot.jpg" alt="Mugwort Calm Hydrating Toner" class="media-cover" width="400" height="400" loading="lazy" />
-            <span class="absolute top-3 left-3 text-[0.65rem] uppercase tracking-wider bg-white px-2 py-1">Calm</span>
+        <article class="routine-card group">
+          <div class="routine-card__media">
+            <img src="assets/hy-19-routine-serum.jpg" alt="Artemisia Calming Serum dropper bottle" class="media-cover" width="400" height="400" loading="lazy" decoding="async" />
+            <span class="routine-card__badge">Step 3 &middot; Activate</span>
           </div>
-          <h3 class="font-display text-xl mb-1">Mugwort Calm Hydrating Toner</h3>
-          <p class="text-sm text-muted mb-2">Lightweight soothing facial toner</p>
-          <p class="font-medium mb-4">&euro;24,90</p>
-          <button class="min-h-[44px] px-6 bg-ink text-white text-xs uppercase tracking-wider hover:bg-mint-dark transition">Add to Bag</button>
+          <div class="routine-card__body">
+            <h3 class="font-display text-xl mb-2">Artemisia Calming Serum</h3>
+            <p class="text-sm text-muted mb-4 leading-relaxed">Barrier-supporting serum that seals in calm after toning.</p>
+            <p class="font-medium mb-5">&euro;48,00</p>
+            <button type="button" class="btn btn-outline w-full" aria-label="Quick shop Artemisia Calming Serum">Quick Shop</button>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════ REVIEWS ═══════════════════ -->
-  <section id="reviews" class="py-16 lg:py-24 bg-cream border-t border-border">
+  <section id="reviews" class="section-pad bg-cream border-t border-border">
     <div class="max-w-page mx-auto px-4 lg:px-8">
-      <p class="mb-2"><strong>Overall rating:</strong> 4.6 / 5 from 120 reviews.</p>
-
-      <div class="grid lg:grid-cols-2 gap-10 mb-12">
-        <div>
-          <h3 class="font-display text-xl mb-3">Review Summary</h3>
-          <p class="text-dark leading-relaxed mb-6">Mugwort Calm Hydrating Toner is a highly regarded soothing facial toner that delivers weightless hydration and visible calm. Its watery texture is deeply appreciated by customers with sensitive skin, offering moisture without stickiness or stinging.</p>
-          <h4 class="text-sm uppercase tracking-wider mb-2">Summary topics</h4>
-          <ul class="text-sm text-dark space-y-1 mb-4">
-            <li>Texture: 22%</li>
-            <li>Hydration & Calm: 31%</li>
-            <li>Sensitive skin: 18%</li>
-          </ul>
-          <p class="text-xs text-muted">Most mentioned: redness relief, sensitive skin, lightweight texture, daily calm</p>
+      <div class="reviews-header mb-12 lg:mb-14">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted mb-3">Customer voices</p>
+        <div class="flex flex-wrap items-end gap-4 mb-6">
+          <h2 class="font-display text-3xl lg:text-4xl font-light">Rated 4.6 out of 5</h2>
+          <p class="text-sm text-muted pb-1">Based on 120 verified reviews</p>
         </div>
+        <div class="flex gap-1 text-gold text-lg mb-6" aria-label="4.6 out of 5 stars">&#9733;&#9733;&#9733;&#9733;<span class="text-gold/40">&#9733;</span></div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 mb-14">
+        <blockquote class="reviews-lead">
+          <p class="font-display text-xl lg:text-2xl font-light leading-snug text-ink mb-5">&ldquo;Customers with sensitive skin keep coming back for the same reason: it hydrates deeply without sting, heaviness, or stickiness.&rdquo;</p>
+          <p class="text-dark leading-relaxed">Readers mention calmer cheeks within minutes, a water-light texture that layers well, and skin that feels balanced from morning to night. It has become a daily staple for many who previously skipped toner altogether.</p>
+        </blockquote>
         <div>
-          <h3 class="font-display text-xl mb-4">Review highlights</h3>
+          <h3 class="text-sm uppercase tracking-[0.14em] font-medium text-muted mb-5">What people mention most</h3>
+          <ul class="reviews-tags">
+            <li>Redness relief</li>
+            <li>Lightweight texture</li>
+            <li>Sensitive skin friendly</li>
+            <li>Makeup prep</li>
+            <li>Daily calm</li>
+          </ul>
+          <h3 class="text-sm uppercase tracking-[0.14em] font-medium text-muted mt-8 mb-4">Quick takes</h3>
           <ul class="space-y-4 text-dark">
-            <li class="italic">"Finally a toner that doesn't sting. My cheeks look calmer by morning." &mdash; Elena K.</li>
-            <li class="italic">"I layer it three times &mdash; plump skin, zero stickiness." &mdash; Amy C.</li>
-            <li class="italic">"Replaced my essence and toner in one step. Makeup sits better." &mdash; Sarah M.</li>
+            <li class="italic border-l-2 border-mint pl-4">&ldquo;Finally a toner that doesn't sting. My cheeks look calmer by morning.&rdquo; <span class="not-italic text-sm text-muted">&mdash; Elena K.</span></li>
+            <li class="italic border-l-2 border-mint pl-4">&ldquo;I layer it three times &mdash; plump skin, zero stickiness.&rdquo; <span class="not-italic text-sm text-muted">&mdash; Amy C.</span></li>
+            <li class="italic border-l-2 border-mint pl-4">&ldquo;Replaced my essence and toner in one step. Makeup sits better.&rdquo; <span class="not-italic text-sm text-muted">&mdash; Sarah M.</span></li>
           </ul>
         </div>
       </div>
 
-      <h3 class="font-display text-2xl mb-8">Reviews</h3>
+      <h3 class="font-display text-2xl mb-8">Individual reviews</h3>
       <div class="space-y-8 max-w-3xl">
         <article class="border-b border-border pb-8">
           <h4 class="font-semibold mb-2">Holy grail for reactive skin</h4>
@@ -785,6 +888,7 @@
       <div class="bb-footer__bottom">
         <div class="bb-footer__legal">
           <span>&copy; 2026 Baltic Bloom</span>
+          <span class="demo-note">Portfolio concept &mdash; fictional brand</span>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
           <a href="#">Shipping Policy</a>
@@ -823,137 +927,216 @@
   <!-- Sticky ATC -->
   <div id="sticky-atc" class="sticky-atc fixed bottom-0 left-0 right-0 z-40 bg-stone rounded-t-lg p-3 lg:flex lg:justify-end border-t border-border">
     <div class="max-w-page mx-auto w-full lg:flex lg:justify-end">
-      <button class="w-full lg:max-w-[22rem] min-h-[52px] bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium">Add to Bag &mdash; &euro;24,90</button>
+      <button class="btn btn-primary w-full lg:max-w-[22rem]" aria-label="Add Mugwort Calm Hydrating Toner to bag">Add to Bag &mdash; &euro;24,90</button>
     </div>
   </div>
 
   <script>
-    // Drawer
-    const drawer = document.getElementById('drawer');
-    const openDrawer = () => { drawer.classList.add('pointer-events-auto'); drawer.querySelector('#drawer-overlay').classList.add('opacity-100'); drawer.querySelector('#drawer-panel').classList.remove('-translate-x-full'); };
-    const closeDrawer = () => { drawer.classList.remove('pointer-events-auto'); drawer.querySelector('#drawer-overlay').classList.remove('opacity-100'); drawer.querySelector('#drawer-panel').classList.add('-translate-x-full'); };
-    document.getElementById('menu-open')?.addEventListener('click', openDrawer);
-    document.getElementById('menu-close')?.addEventListener('click', closeDrawer);
-    document.getElementById('drawer-overlay')?.addEventListener('click', closeDrawer);
+    (function () {
+      'use strict';
 
-    // Gallery
-    let gIdx = 0;
-    const gSlides = document.querySelectorAll('.gallery-slide');
-    const gThumbs = document.querySelectorAll('.thumb');
-    const gCount = document.getElementById('gallery-count');
-    const showSlide = (i) => {
-      gIdx = (i + gSlides.length) % gSlides.length;
-      gSlides.forEach((s, j) => {
-        s.classList.toggle('is-active', j === gIdx);
-        const v = s.querySelector('video');
-        if (v) { j === gIdx ? v.play().catch(() => {}) : (v.pause(), v.currentTime = 0); }
-      });
-      gThumbs.forEach((t, j) => t.classList.toggle('is-active', j === gIdx));
-      if (gCount) gCount.textContent = `${gIdx + 1}/${gSlides.length}`;
-    };
-    document.querySelectorAll('.gallery-prev').forEach(b => b.addEventListener('click', () => showSlide(gIdx - 1)));
-    document.querySelectorAll('.gallery-next').forEach(b => b.addEventListener('click', () => showSlide(gIdx + 1)));
-    gThumbs.forEach(t => t.addEventListener('click', () => showSlide(+t.dataset.thumb)));
+      const $ = (sel, ctx = document) => ctx.querySelector(sel);
+      const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-    // Before/after pairs
-    const baPairs = [
-      { before: 'assets/hy-09-ba1-before.jpg', after: 'assets/hy-09-ba1-after.jpg', bAlt: 'Before &mdash; visible redness', aAlt: 'After &mdash; calmer hydrated skin' },
-      { before: 'assets/hy-10-ba2-before.jpg', after: 'assets/hy-10-ba2-after.jpg', bAlt: 'Before &mdash; uneven texture', aAlt: 'After &mdash; smoother skin texture' },
-      { before: 'assets/hy-11-ba3-before.jpg', after: 'assets/hy-11-ba3-after.jpg', bAlt: 'Before &mdash; dehydrated irritated skin', aAlt: 'After &mdash; supple even-toned skin' },
-    ];
-    const baBefore = document.querySelector('[data-ba-before]');
-    const baAfter = document.querySelector('[data-ba-after]');
-    const baBtns = document.querySelectorAll('.ba-pair-btn');
-    const setBaPair = (idx) => {
-      const p = baPairs[idx];
-      if (!p || !baBefore || !baAfter) return;
-      baBefore.src = p.before; baBefore.alt = p.bAlt;
-      baAfter.src = p.after; baAfter.alt = p.aAlt;
-      baBtns.forEach((b, j) => {
-        b.classList.toggle('bg-ink', j === idx);
-        b.classList.toggle('bg-border', j !== idx);
-      });
-    };
+      // --- Drawer ---
+      const drawer = $('#drawer');
+      const drawerPanel = $('#drawer-panel');
+      const drawerOverlay = $('#drawer-overlay');
+      let drawerTrigger = null;
 
-    // Carousels
-    const carousel = (slides, prev, next, countEl, onChange) => {
-      let i = 0;
-      const show = (n) => {
-        i = (n + slides.length) % slides.length;
-        slides.forEach((s, j) => s.classList.toggle('is-active', j === i));
-        if (countEl) countEl.textContent = `${i + 1}/${slides.length}`;
-        onChange?.(i);
+      const setDrawer = (open) => {
+        if (!drawer) return;
+        drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+        drawer.classList.toggle('pointer-events-auto', open);
+        drawerOverlay?.classList.toggle('opacity-100', open);
+        drawerPanel?.classList.toggle('-translate-x-full', !open);
+        if (open) {
+          drawerTrigger = document.activeElement;
+          $('#menu-close')?.focus();
+        } else {
+          drawerTrigger?.focus();
+        }
       };
-      prev?.addEventListener('click', () => show(i - 1));
-      next?.addEventListener('click', () => show(i + 1));
-      return show;
-    };
-    carousel(document.querySelectorAll('.benefit-slide'), document.querySelector('.benefit-prev'), document.querySelector('.benefit-next'), document.getElementById('benefit-count'));
-    carousel(document.querySelectorAll('.result-slide'), document.querySelector('.result-prev'), document.querySelector('.result-next'), document.getElementById('result-count'), setBaPair);
-    baBtns.forEach(b => b.addEventListener('click', () => setBaPair(+b.dataset.pair)));
 
-    // Modal
-    document.querySelectorAll('.trial-open').forEach(b => b.addEventListener('click', () => document.getElementById(b.dataset.modal)?.classList.add('is-open')));
-    document.querySelectorAll('.modal-close').forEach(b => b.addEventListener('click', () => b.closest('.modal')?.classList.remove('is-open')));
-    document.querySelectorAll('.modal').forEach(m => m.addEventListener('click', e => { if (e.target === m) m.classList.remove('is-open'); }));
+      $('#menu-open')?.addEventListener('click', () => setDrawer(true));
+      $('#menu-close')?.addEventListener('click', () => setDrawer(false));
+      drawerOverlay?.addEventListener('click', () => setDrawer(false));
 
-    // INCI toggle
-    document.getElementById('inci-toggle')?.addEventListener('click', () => document.getElementById('inci-full')?.classList.toggle('hidden'));
+      // --- Gallery ---
+      let gIdx = 0;
+      const gSlides = $$('.gallery-slide');
+      const gThumbs = $$('.thumb');
+      const gCount = $('#gallery-count');
 
-    // Before/after slider
-    document.querySelectorAll('.ba-range').forEach(r => r.addEventListener('input', e => {
-      const pct = e.target.value;
-      e.target.closest('[data-ba]')?.querySelector('.ba-after')?.style.setProperty('clip-path', `inset(0 ${100 - pct}% 0 0)`);
-    }));
+      const showSlide = (i) => {
+        gIdx = (i + gSlides.length) % gSlides.length;
+        gSlides.forEach((slide, j) => {
+          slide.classList.toggle('is-active', j === gIdx);
+          const video = slide.querySelector('video');
+          if (video) {
+            if (j === gIdx) video.play().catch(() => {});
+            else { video.pause(); video.currentTime = 0; }
+          }
+        });
+        gThumbs.forEach((thumb, j) => thumb.classList.toggle('is-active', j === gIdx));
+        if (gCount) gCount.textContent = `${gIdx + 1}/${gSlides.length}`;
+      };
 
-    // Chapters
-    const chMenu = document.getElementById('chapters-menu');
-    const chPanel = document.getElementById('chapters-panel');
-    const chBg = document.getElementById('chapters-bg');
-    const toggleCh = (open) => {
-      chMenu.classList.toggle('pointer-events-auto', open);
-      chBg?.classList.toggle('opacity-100', open);
-      chPanel?.classList.toggle('is-open', open);
-    };
-    document.getElementById('chapters-toggle-m')?.addEventListener('click', () => toggleCh(true));
-    chBg?.addEventListener('click', () => toggleCh(false));
-
-    // Sticky ATC
-    const sticky = document.getElementById('sticky-atc');
-    const shop = document.getElementById('shop');
-    if (sticky && shop) new IntersectionObserver(([e]) => sticky.classList.toggle('is-visible', !e.isIntersecting), { threshold: 0 }).observe(shop);
-
-    // Brand film autoplay
-    const brandVideo = document.querySelector('.brand-video');
-    if (brandVideo) {
-      brandVideo.muted = true;
-      const tryPlay = () => brandVideo.play().catch(() => {});
-      if (brandVideo.readyState >= 2) tryPlay();
-      else brandVideo.addEventListener('loadeddata', tryPlay, { once: true });
-    }
-
-    // Footer locale dropdowns
-    const localeSetup = (toggleId, panelId, attr) => {
-      const toggle = document.getElementById(toggleId);
-      const panel = document.getElementById(panelId);
-      if (!toggle || !panel) return;
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        document.querySelectorAll('.bb-locale-panel').forEach(p => { if (p !== panel) p.classList.remove('is-open'); });
-        panel.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', panel.classList.contains('is-open'));
+      const galleryRegion = $('.gallery-slide')?.parentElement;
+      galleryRegion?.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); showSlide(gIdx - 1); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); showSlide(gIdx + 1); }
       });
-      panel.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => {
-        const val = btn.dataset[attr];
-        const label = toggle.querySelector('.bb-locale-label');
-        if (label && val) label.textContent = val;
-        panel.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
+
+      $$('.gallery-prev').forEach((btn) => btn.addEventListener('click', () => showSlide(gIdx - 1)));
+      $$('.gallery-next').forEach((btn) => btn.addEventListener('click', () => showSlide(gIdx + 1)));
+      gThumbs.forEach((thumb) => thumb.addEventListener('click', () => showSlide(+thumb.dataset.thumb)));
+
+      // --- Before / after ---
+      const baPairs = [
+        { before: 'assets/hy-09-ba1-before.jpg', after: 'assets/hy-09-ba1-after.jpg', bAlt: 'Before — visible redness', aAlt: 'After — calmer hydrated skin' },
+        { before: 'assets/hy-10-ba2-before.jpg', after: 'assets/hy-10-ba2-after.jpg', bAlt: 'Before — uneven texture', aAlt: 'After — smoother skin texture' },
+        { before: 'assets/hy-11-ba3-before.jpg', after: 'assets/hy-11-ba3-after.jpg', bAlt: 'Before — dehydrated irritated skin', aAlt: 'After — supple even-toned skin' },
+      ];
+      const baBefore = $('[data-ba-before]');
+      const baAfter = $('[data-ba-after]');
+      const baBtns = $$('.ba-pair-btn');
+
+      const setBaPair = (idx) => {
+        const pair = baPairs[idx];
+        if (!pair || !baBefore || !baAfter) return;
+        baBefore.src = pair.before;
+        baBefore.alt = pair.bAlt;
+        baAfter.src = pair.after;
+        baAfter.alt = pair.aAlt;
+        baBtns.forEach((btn, j) => {
+          btn.classList.toggle('is-active', j === idx);
+          btn.setAttribute('aria-pressed', j === idx ? 'true' : 'false');
+        });
+      };
+
+      // --- Carousels ---
+      const carousel = (slides, prev, next, countEl, onChange) => {
+        let index = 0;
+        const show = (n) => {
+          index = (n + slides.length) % slides.length;
+          slides.forEach((slide, j) => slide.classList.toggle('is-active', j === index));
+          if (countEl) countEl.textContent = `${index + 1}/${slides.length}`;
+          onChange?.(index);
+        };
+        const region = slides[0]?.parentElement;
+        region?.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') { e.preventDefault(); show(index - 1); }
+          if (e.key === 'ArrowRight') { e.preventDefault(); show(index + 1); }
+        });
+        prev?.addEventListener('click', () => show(index - 1));
+        next?.addEventListener('click', () => show(index + 1));
+        return show;
+      };
+
+      carousel($$('.benefit-slide'), $('.benefit-prev'), $('.benefit-next'), $('#benefit-count'));
+      carousel($$('.result-slide'), $('.result-prev'), $('.result-next'), $('#result-count'), setBaPair);
+      baBtns.forEach((btn) => btn.addEventListener('click', () => setBaPair(+btn.dataset.pair)));
+
+      // --- Modal ---
+      let modalTrigger = null;
+
+      const openModal = (id) => {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        modalTrigger = document.activeElement;
+        modal.hidden = false;
+        modal.classList.add('is-open');
+        $('.modal-close', modal)?.focus();
+      };
+
+      const closeModal = (modal) => {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+        modal.hidden = true;
+        modalTrigger?.focus();
+      };
+
+      $$('.trial-open').forEach((btn) => btn.addEventListener('click', () => openModal(btn.dataset.modal)));
+      $$('.modal-close').forEach((btn) => btn.addEventListener('click', () => closeModal(btn.closest('.modal'))));
+      $$('.modal').forEach((modal) => modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal); }));
+
+      // --- INCI ---
+      $('#inci-toggle')?.addEventListener('click', () => {
+        const panel = $('#inci-full');
+        const open = panel?.classList.toggle('hidden') === false;
+        $('#inci-toggle')?.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      // --- Before/after slider ---
+      $$('.ba-range').forEach((range) => range.addEventListener('input', (e) => {
+        const pct = e.target.value;
+        e.target.closest('[data-ba]')?.querySelector('.ba-after')?.style.setProperty('clip-path', `inset(0 ${100 - pct}% 0 0)`);
       }));
-    };
-    localeSetup('region-toggle', 'region-panel', 'region');
-    localeSetup('lang-toggle', 'lang-panel', 'lang');
-    document.addEventListener('click', () => document.querySelectorAll('.bb-locale-panel').forEach(p => p.classList.remove('is-open')));
+
+      // --- Chapters ---
+      const chMenu = $('#chapters-menu');
+      const chPanel = $('#chapters-panel');
+      const chBg = $('#chapters-bg');
+      const chToggle = $('#chapters-toggle-m');
+
+      const toggleChapters = (open) => {
+        chMenu?.classList.toggle('pointer-events-auto', open);
+        chBg?.classList.toggle('opacity-100', open);
+        chPanel?.classList.toggle('is-open', open);
+        chToggle?.setAttribute('aria-expanded', open ? 'true' : 'false');
+      };
+
+      chToggle?.addEventListener('click', () => toggleChapters(true));
+      chBg?.addEventListener('click', () => toggleChapters(false));
+
+      // --- Sticky ATC ---
+      const sticky = $('#sticky-atc');
+      const shop = $('#shop');
+      if (sticky && shop) {
+        new IntersectionObserver(([entry]) => sticky.classList.toggle('is-visible', !entry.isIntersecting), { threshold: 0 }).observe(shop);
+      }
+
+      // --- Brand film ---
+      const brandVideo = $('.brand-video');
+      if (brandVideo) {
+        brandVideo.muted = true;
+        const tryPlay = () => brandVideo.play().catch(() => {});
+        if (brandVideo.readyState >= 2) tryPlay();
+        else brandVideo.addEventListener('loadeddata', tryPlay, { once: true });
+      }
+
+      // --- Footer locale ---
+      const localeSetup = (toggleId, panelId, attr) => {
+        const toggle = document.getElementById(toggleId);
+        const panel = document.getElementById(panelId);
+        if (!toggle || !panel) return;
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          $$('.bb-locale-panel').forEach((p) => { if (p !== panel) p.classList.remove('is-open'); });
+          panel.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', panel.classList.contains('is-open'));
+        });
+        $$('button', panel).forEach((btn) => btn.addEventListener('click', () => {
+          const val = btn.dataset[attr];
+          const label = $('.bb-locale-label', toggle);
+          if (label && val) label.textContent = val;
+          panel.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }));
+      };
+      localeSetup('region-toggle', 'region-panel', 'region');
+      localeSetup('lang-toggle', 'lang-panel', 'lang');
+      document.addEventListener('click', () => $$('.bb-locale-panel').forEach((p) => p.classList.remove('is-open')));
+
+      // --- Global Escape ---
+      document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        if ($('.modal.is-open')) $$('.modal.is-open').forEach((m) => closeModal(m));
+        if (drawer?.classList.contains('pointer-events-auto')) setDrawer(false);
+        if (chPanel?.classList.contains('is-open')) toggleChapters(false);
+      });
+    })();
   </script>
 </body>
 </html>
