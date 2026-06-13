@@ -1,0 +1,957 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mugwort Calm Hydrating Toner — Baltic Bloom</title>
+  <meta name="description" content="Lightweight calming mugwort toner for sensitive skin. Soothe redness, hydrate deeply, strengthen your barrier." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            stone: '#f3efe8',
+            cream: '#faf8f5',
+            champagne: '#f7f3ee',
+            mint: '#9ec5b0',
+            'mint-dark': '#4a6b58',
+            gold: '#b8956a',
+            tag: '#e8f0eb',
+            muted: '#4a4a4a',
+            dark: '#3d3d3d',
+            border: '#e8e8e8',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            ui: ['Jost', 'system-ui', 'sans-serif'],
+          },
+          maxWidth: { page: '94.5rem' },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: 'Jost', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .acc-icon { transform: rotate(45deg); }
+    .acc-icon { transition: transform 0.3s ease; }
+    .marquee-track { animation: marquee 28s linear infinite; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .ticker-track { animation: ticker 35s linear infinite; }
+    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .benefit-slide { display: none; }
+    .benefit-slide.is-active { display: block; }
+    .result-slide { display: none; }
+    .result-slide.is-active { display: block; }
+    .modal { display: none; }
+    .modal.is-open { display: flex; }
+    .ba-slider { position: relative; overflow: hidden; }
+    .ba-after { clip-path: inset(0 50% 0 0); }
+    .chapters-panel { transform: translateY(100%); transition: transform 0.35s ease; }
+    .chapters-panel.is-open { transform: translateY(0); }
+    @media (min-width: 1024px) {
+      .chapters-panel { transform: translateY(10px); opacity: 0; pointer-events: none; }
+      .chapters-panel.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    }
+    .sticky-atc { transform: translateY(100%); transition: transform 0.35s ease; }
+    .sticky-atc.is-visible { transform: translateY(0); }
+    .gallery-slide { opacity: 0; pointer-events: none; transition: opacity 0.4s; }
+    .gallery-slide.is-active { opacity: 1; pointer-events: auto; }
+    .thumb.is-active { border-color: #4a6b58; box-shadow: 0 0 0 1px #4a6b58; }
+    .gallery-slide img, .media-cover { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-slide video { width: 100%; height: 100%; object-fit: contain; display: block; background: #f7f3ee; }
+    .gallery-slide--packshot img { object-fit: contain; background: #fff; }
+    .brand-video-section { position: relative; background: #101211; border-color: rgba(255,255,255,0.08); width: 100%; }
+    .brand-video-wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; background: #101211; overflow: hidden; }
+    .brand-video { width: 100%; height: 100%; object-fit: contain; display: block; background: #101211; }
+    .brand-video-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: clamp(1.25rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2rem); background: linear-gradient(to top, rgba(16,18,17,0.88) 0%, rgba(16,18,17,0.35) 38%, transparent 68%); pointer-events: none; text-align: center; }
+    .brand-video-eyebrow { margin: 0 0 0.35rem; font-size: clamp(0.68rem, 1.6vw, 0.82rem); letter-spacing: 0.22em; text-transform: uppercase; color: #b8956a; font-weight: 500; }
+    .brand-video-title { margin: 0 0 0.4rem; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.35rem, 4.5vw, 2.5rem); font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; line-height: 1.15; text-shadow: 0 2px 16px rgba(0,0,0,0.45); }
+    .brand-video-sub { margin: 0; font-size: clamp(0.65rem, 1.5vw, 0.78rem); letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.82); font-weight: 500; }
+    .ba-layer img { width: 100%; height: 100%; object-fit: cover; }
+    .ugc-video { width: 100%; height: 100%; object-fit: cover; }
+    /* Premium footer */
+    .bb-footer { position: relative; color: rgba(255,255,255,0.92); background: linear-gradient(165deg, #1e2621 0%, #141816 55%, #101211 100%); overflow: hidden; }
+    .bb-footer__accent { height: 2px; background: linear-gradient(90deg, transparent, #b8956a 20%, #9ec5b0 50%, #b8956a 80%, transparent); opacity: 0.65; }
+    .bb-footer__content { position: relative; z-index: 2; padding: clamp(2.5rem,5vw,4rem) clamp(0.75rem,1.25vw,1.25rem) clamp(5.5rem,8vw,3rem); max-width: 94.5rem; margin: 0 auto; }
+    .bb-footer__masthead { display: grid; gap: 2rem; margin-bottom: clamp(2.5rem,4vw,3.5rem); padding-bottom: clamp(2rem,3.5vw,3rem); border-bottom: 1px solid rgba(255,255,255,0.12); }
+    @media (min-width: 64em) { .bb-footer__masthead { grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: start; } }
+    .bb-footer__eyebrow { margin: 0 0 0.5rem; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: #b8956a; font-weight: 500; }
+    .bb-footer__wordmark { margin: 0 0 0.85rem; font-size: clamp(1.65rem,2.8vw,2.35rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.15; color: #fff; }
+    .bb-footer__tagline { max-width: 36ch; margin: 0; font-size: 0.92rem; line-height: 1.6; color: rgba(255,255,255,0.68); }
+    .bb-footer__newsletter { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 2px; padding: 1.35rem 1.5rem; }
+    .bb-footer__newsletter-head h3 { margin: 0 0 0.35rem; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; }
+    .bb-footer__newsletter-head p { margin: 0 0 1rem; font-size: 0.88rem; line-height: 1.5; color: rgba(255,255,255,0.65); }
+    .bb-newsletter__row { display: flex; flex-direction: column; gap: 0.55rem; }
+    @media (min-width: 40em) { .bb-newsletter__row { flex-direction: row; align-items: stretch; gap: 0.5rem; } }
+    .bb-newsletter__row input { flex: 1; min-height: 2.85rem; padding: 0 1rem; border: 1px solid rgba(255,255,255,0.22); border-radius: 2px; background: rgba(255,255,255,0.96); color: #1a1a1a; font-size: 0.9rem; }
+    .bb-newsletter__row input:focus { outline: 2px solid #9ec5b0; outline-offset: 1px; }
+    .bb-newsletter__submit { min-height: 2.85rem; padding: 0 1.75rem; background: #fff; color: #1a1a1a; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; border: none; cursor: pointer; white-space: nowrap; }
+    .bb-newsletter__submit:hover { background: #f7f3ee; }
+    .bb-newsletter__disclaimer { margin: 0.65rem 0 0; font-size: 0.72rem; line-height: 1.45; color: rgba(255,255,255,0.5); }
+    .bb-footer__links-grid { display: grid; gap: 2rem 2.5rem; grid-template-columns: repeat(2,1fr); }
+    @media (min-width: 64em) { .bb-footer__links-grid { grid-template-columns: repeat(4,1fr); gap: 2rem 3rem; } }
+    .bb-footer__col h4 { margin: 0 0 1rem; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .bb-footer__col a { display: block; color: rgba(255,255,255,0.88); text-decoration: none; font-size: 0.88rem; line-height: 1.4; padding: 0.28rem 0; transition: color 0.2s; }
+    .bb-footer__col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+    .bb-footer__social-row { display: flex; gap: 0.75rem; margin-top: 0.25rem; }
+    .bb-footer__social-row a { display: inline-flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; padding: 0; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; color: rgba(255,255,255,0.88); }
+    .bb-footer__social-row a:hover { border-color: rgba(255,255,255,0.5); color: #fff; text-decoration: none; }
+    .bb-footer__payments { margin-top: clamp(2rem,3vw,2.5rem); padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem 0.5rem; }
+    .bb-footer__payments-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-right: 0.25rem; width: 100%; flex-basis: 100%; }
+    @media (min-width: 40em) { .bb-footer__payments-label { width: auto; flex-basis: auto; } }
+    .bb-footer__payments-icons { display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem; }
+    .bb-pay-icon { display: inline-flex; align-items: center; justify-content: center; width: 4.25rem; height: 2.65rem; padding: 0.45rem 0.55rem; background: #fff; border-radius: 5px; border: 1px solid rgba(255,255,255,0.25); box-shadow: 0 2px 8px rgba(0,0,0,0.28); flex-shrink: 0; }
+    @media (min-width: 48em) { .bb-pay-icon { width: 4.75rem; height: 2.9rem; padding: 0.5rem 0.6rem; } }
+    .bb-pay-icon svg { display: block; width: 100%; height: 100%; }
+    .bb-footer__bottom { margin-top: clamp(1.5rem,2.5vw,2rem); padding-top: 1.35rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 1rem; font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+    @media (min-width: 64em) { .bb-footer__bottom { flex-direction: row; align-items: center; justify-content: space-between; } }
+    .bb-footer__legal { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center; }
+    .bb-footer__legal a { color: inherit; text-decoration: none; }
+    .bb-footer__legal a:hover { text-decoration: underline; }
+    .bb-footer__locale-row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    .bb-locale-btn { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 2.25rem; padding: 0 0.85rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 2px; background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.88); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; }
+    .bb-locale-btn:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.08); }
+    .bb-locale-panel { display: none; position: absolute; bottom: calc(100% + 0.5rem); right: 0; min-width: 12rem; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.15); border-radius: 2px; padding: 0.5rem 0; z-index: 10; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    .bb-locale-panel.is-open { display: block; }
+    .bb-locale-panel button { display: flex; align-items: center; gap: 0.5rem; width: 100%; padding: 0.55rem 1rem; border: none; background: none; color: rgba(255,255,255,0.88); font-size: 0.8rem; text-align: left; cursor: pointer; }
+    .bb-locale-panel button:hover { background: rgba(255,255,255,0.06); }
+    .bb-locale-wrap { position: relative; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  </style>
+  <script>const M = 'assets/';</script>
+</head>
+<body class="bg-white text-ink antialiased">
+
+  <!-- Preview banner -->
+  <div class="bg-ink text-white text-center text-[0.68rem] tracking-[0.12em] uppercase py-2 px-4 font-medium">Local preview only â€” not published to Shopify</div>
+
+  <!-- Announcement -->
+  <div class="bg-ink text-white/90 text-[0.68rem] tracking-[0.12em] uppercase py-2 text-center font-medium">Free Standard Shipping on Orders Over â‚¬50</div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/98 border-b border-border">
+    <div class="max-w-page mx-auto grid grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 lg:px-8 py-3.5">
+      <button id="menu-open" class="justify-self-start w-10 h-10 flex items-center justify-center lg:hidden" aria-label="Open menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <a href="#" class="font-ui text-[0.72rem] font-medium tracking-[0.2em] uppercase text-ink">Baltic Bloom</a>
+      <div class="justify-self-end flex items-center gap-1">
+        <a href="#reviews" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-stone" aria-label="Search"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke-width="1.5"/><path stroke-width="1.5" d="M20 20l-3-3"/></svg></a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-stone relative" aria-label="Cart">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1" fill="currentColor"/><circle cx="18" cy="20" r="1" fill="currentColor"/></svg>
+          <span class="absolute top-0.5 right-0.5 bg-mint-dark text-white text-[0.58rem] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="drawer" class="fixed inset-0 z-[200] pointer-events-none">
+    <div id="drawer-overlay" class="absolute inset-0 bg-black/40 opacity-0 transition-opacity"></div>
+    <div id="drawer-panel" class="absolute top-0 left-0 w-[min(22rem,90vw)] h-full bg-white -translate-x-full transition-transform p-8 overflow-y-auto">
+      <div class="flex justify-between items-center mb-5">
+        <span class="font-display text-xl">Baltic Bloom</span>
+        <button id="menu-close" aria-label="Close menu">âœ•</button>
+      </div>
+      <nav class="space-y-0">
+        <a href="#shop" class="block py-3.5 text-sm uppercase tracking-wide border-b border-border">Shop</a>
+        <a href="#benefits" class="block py-3.5 text-sm uppercase tracking-wide border-b border-border">Benefits</a>
+        <a href="#results" class="block py-3.5 text-sm uppercase tracking-wide border-b border-border">Results</a>
+        <a href="#science" class="block py-3.5 text-sm uppercase tracking-wide border-b border-border">Science</a>
+        <a href="#ingredients" class="block py-3.5 text-sm uppercase tracking-wide border-b border-border">Ingredients</a>
+        <a href="#faq" class="block py-3.5 text-sm uppercase tracking-wide border-b border-border">FAQ</a>
+      </nav>
+      <a href="#shop" class="mt-6 block text-center min-h-[48px] leading-[48px] bg-ink text-white text-sm uppercase tracking-wider">Add to Bag</a>
+    </div>
+  </div>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• HERO â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="shop" class="max-w-page mx-auto">
+    <div class="lg:grid lg:grid-cols-[1.2fr_0.8fr] lg:gap-10 lg:items-stretch">
+      <!-- Gallery -->
+      <div class="bg-gradient-to-br from-champagne to-[#ebe4d9] relative">
+        <div class="grid lg:grid-cols-[60px_1fr] gap-3 p-3.5 lg:p-5 h-full">
+          <div class="hidden lg:flex flex-col gap-2.5">
+            <button class="thumb is-active w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="0" aria-label="Packshot"><img src="assets/hy-01-packshot.jpg" alt="" width="60" height="68" loading="eager" /></button>
+            <button class="thumb w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="1" aria-label="Texture"><img src="assets/hy-02-texture.jpg" alt="" width="60" height="68" loading="lazy" /></button>
+            <button class="thumb w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="2" aria-label="Lifestyle"><img src="assets/hy-03-lifestyle.jpg" alt="" width="60" height="68" loading="lazy" /></button>
+            <button class="thumb w-[60px] h-[68px] border-2 border-transparent rounded overflow-hidden" data-thumb="3" aria-label="Application video"><img src="assets/hy-04-application-frame.jpg" alt="" width="60" height="68" loading="lazy" /></button>
+          </div>
+          <div class="relative h-96 sm:h-[28rem] lg:h-[34rem] rounded overflow-hidden bg-white">
+            <div class="gallery-slide gallery-slide--packshot is-active absolute inset-0">
+              <img src="assets/hy-01-packshot.jpg" alt="Mugwort Calm Hydrating Toner â€” frosted sage green bottle packshot" width="1600" height="2000" loading="eager" />
+            </div>
+            <div class="gallery-slide absolute inset-0">
+              <img src="assets/hy-02-texture.jpg" alt="Close-up watery mugwort toner texture swatch" width="1600" height="2000" loading="lazy" />
+            </div>
+            <div class="gallery-slide absolute inset-0">
+              <img src="assets/hy-03-lifestyle.jpg" alt="Model holding Mugwort Calm Hydrating Toner in soft natural light" width="1600" height="2000" loading="lazy" />
+            </div>
+            <div class="gallery-slide absolute inset-0">
+              <video src="assets/hy-04-application.mp4" poster="assets/hy-04-application-frame.jpg" autoplay loop muted playsinline aria-label="Models applying the calming toner"></video>
+            </div>
+            <div class="lg:hidden absolute inset-0 flex justify-between items-center px-2 pointer-events-none">
+              <button class="gallery-prev pointer-events-auto w-10 h-10 bg-white/80 rounded-full" aria-label="Previous">â€¹</button>
+              <button class="gallery-next pointer-events-auto w-10 h-10 bg-white/80 rounded-full" aria-label="Next">â€º</button>
+            </div>
+            <div class="hidden lg:flex absolute bottom-4 left-1/2 -translate-x-1/2 items-center gap-4 bg-white/95 px-4 py-2 rounded-full shadow border border-border text-sm">
+              <button class="gallery-prev" aria-label="Previous">â€¹</button>
+              <span id="gallery-count">1/4</span>
+              <button class="gallery-next" aria-label="Next">â€º</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product info -->
+      <div class="px-5 py-7 lg:py-10 lg:pl-10 lg:border-l border-border flex flex-col justify-center">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-tag rounded-full text-[0.82rem] uppercase tracking-wider text-mint-dark font-medium">
+            <span class="w-1.5 h-1.5 bg-mint-dark rounded-full"></span> Calm
+          </span>
+          <span class="flex items-center gap-2 text-[1.05rem] text-dark">
+            <span class="text-gold tracking-tight">â˜…â˜…â˜…â˜…</span><span class="text-gold/40">â˜…</span>
+            <a href="#reviews" class="font-medium underline-offset-2 hover:underline">4.6 (120 reviews)</a>
+          </span>
+        </div>
+
+        <h1 class="font-display text-[2.15rem] lg:text-[clamp(2.5rem,3.2vw,3.75rem)] font-light leading-[1.12] mb-3">Mugwort Calm Hydrating Toner</h1>
+        <p class="text-[1.08rem] lg:text-[1.2rem] leading-relaxed text-dark mb-4">A multi-tasking daily toner that does it all. It delivers lasting hydration without heaviness, soothes sensitivity, and smooths skin texture while reinforcing the skin barrier with every use.</p>
+        <p class="text-[1rem] text-dark mb-5">Powered by <strong>Artemisia-Cicaâ„¢</strong>.</p>
+
+        <div class="flex flex-wrap items-center mb-6 border-0">
+          <span class="text-[0.78rem] uppercase tracking-[0.12em] text-muted pr-4">Calm</span>
+          <span class="text-[0.78rem] uppercase tracking-[0.12em] text-muted px-4 border-l border-[#d0d0d0]">Hydrate</span>
+          <span class="text-[0.78rem] uppercase tracking-[0.12em] text-muted px-4 border-l border-[#d0d0d0]">Soothe</span>
+          <span class="text-[0.78rem] uppercase tracking-[0.12em] text-muted pl-4 border-l border-[#d0d0d0]">Strengthen</span>
+        </div>
+
+        <p class="text-[1.2rem] lg:text-[1.45rem] font-medium mb-5">â‚¬24,90</p>
+
+        <button class="w-full min-h-[52px] bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium hover:bg-mint-dark transition mb-1">Add to Bag â€” â‚¬24,90</button>
+
+        <!-- Accordions -->
+        <details class="border-t border-ink group" open>
+          <summary class="flex justify-between items-center py-4 lg:py-5 cursor-pointer text-sm lg:text-base uppercase tracking-wide list-none font-normal">
+            Benefits
+            <span class="acc-icon w-6 h-6 rounded-full bg-stone flex items-center justify-center text-base">+</span>
+          </summary>
+          <div class="pb-4 text-[1.05rem] lg:text-[1.125rem] leading-relaxed text-dark">
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Soothes visible redness and sensitized skin without heaviness or stinging</li>
+              <li>Locks in all-day hydration for a refreshed complexion without stickiness</li>
+              <li>Strengthens the skin barrier for lasting protection against daily stressors</li>
+              <li>Preps and balances skin, providing a smooth, radiant base for makeup</li>
+            </ul>
+            <p class="mt-3 italic text-sm">Clinically Proven. Sensitive-Skin Safe. Derm-Tested. Cruelty-Free.</p>
+          </div>
+        </details>
+
+        <details class="border-t border-ink group">
+          <summary class="flex justify-between items-center py-4 lg:py-5 cursor-pointer text-sm lg:text-base uppercase tracking-wide list-none">
+            How to Use
+            <span class="acc-icon w-6 h-6 rounded-full bg-stone flex items-center justify-center text-base">+</span>
+          </summary>
+          <div class="pb-4 text-[1.05rem] lg:text-[1.125rem] leading-relaxed text-dark">
+            <p>After cleansing, pat generously onto face and neck every morning and night. Layer twice for extra barrier repair, or use the 7-skin method on dehydrated days. For best results, follow with your calming serum and moisturizer.</p>
+          </div>
+        </details>
+
+        <details class="border-t border-b border-ink group">
+          <summary class="flex justify-between items-center py-4 lg:py-5 cursor-pointer text-sm lg:text-base uppercase tracking-wide list-none">
+            Key Ingredients
+            <span class="acc-icon w-6 h-6 rounded-full bg-stone flex items-center justify-center text-base">+</span>
+          </summary>
+          <div class="pb-4 text-[1.05rem] lg:text-[1.125rem] leading-relaxed text-dark space-y-2">
+            <p><strong>Ganghwa Artemisia Water</strong></p>
+            <p><strong>Centella Asiatica</strong></p>
+            <p><strong>Panthenol + Glycerin</strong></p>
+            <p><strong>Lactobacillus Ferment</strong></p>
+            <p><strong>Microbiome Balance Complex</strong></p>
+            <a href="#ingredients" class="inline-block mt-3 text-sm uppercase tracking-wider underline underline-offset-4">See Full Ingredient List</a>
+          </div>
+        </details>
+
+        <!-- Complete The Routine (hero) -->
+        <div class="mt-7 border border-border rounded-sm p-5 bg-white">
+          <p class="text-base uppercase tracking-wider mb-3">Complete The Routine</p>
+          <a href="#" class="flex gap-3 items-center py-2 text-inherit no-underline">
+            <div class="w-16 h-16 rounded-sm shrink-0 overflow-hidden"><img src="assets/hy-20-routine-cleanser.jpg" alt="Balancing Cream Cleanser" class="media-cover" width="64" height="64" loading="lazy" /></div>
+            <div>
+              <strong class="block text-[0.95rem]">Balancing Cream Cleanser</strong>
+              <span class="text-[0.9rem] text-muted">Gentle, clarifying cream-to-foam cleanser Â· â‚¬32,00</span>
+            </div>
+          </a>
+          <a href="#" class="flex gap-3 items-center py-2 border-t border-border text-inherit no-underline">
+            <div class="w-16 h-16 rounded-sm shrink-0 overflow-hidden"><img src="assets/hy-19-routine-serum.jpg" alt="Artemisia Calming Serum" class="media-cover" width="64" height="64" loading="lazy" /></div>
+            <div>
+              <strong class="block text-[0.95rem]">Artemisia Calming Serum</strong>
+              <span class="text-[0.9rem] text-muted">Soothing barrier serum Â· â‚¬48,00</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Customer quote -->
+        <div class="mt-6 grid lg:grid-cols-[38%_62%] bg-champagne border border-border rounded-sm overflow-hidden min-h-[12rem]">
+          <div class="min-h-[10rem] relative"><img src="assets/hy-05-quote.jpg" alt="Serene product lifestyle for customer testimonial" class="media-cover" width="400" height="320" loading="lazy" /></div>
+          <div class="p-5 flex flex-col justify-center">
+            <p class="font-display italic text-[1.2rem] lg:text-[1.35rem] leading-snug mb-3">"This gives me everything I want â€” deep hydration without weight. My redness calms within minutes and my skin feels spa-soft all day."</p>
+            <span class="text-sm text-muted -rotate-2 inline-block">â€” Verified Customer, Sensitive Skin</span>
+          </div>
+        </div>
+
+        <button class="w-full min-h-[52px] mt-6 bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium hover:bg-mint-dark transition lg:hidden">Add to Bag â€” â‚¬24,90</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapter nav trigger (mobile) -->
+  <div class="fixed bottom-5 left-4 z-40 lg:hidden">
+    <button id="chapters-toggle-m" class="bg-white shadow-lg px-4 py-2.5 text-sm uppercase tracking-wide flex items-center gap-2 rounded">
+      <span>chapters</span> â–¾
+    </button>
+  </div>
+  <div id="chapters-menu" class="fixed inset-0 z-[85] pointer-events-none">
+    <div id="chapters-bg" class="absolute inset-0 bg-black/30 opacity-0 transition-opacity"></div>
+    <div id="chapters-panel" class="chapters-panel absolute bottom-0 left-0 right-0 lg:bottom-8 lg:left-8 lg:right-auto lg:w-40 bg-white p-6 lg:p-4 rounded-t-lg lg:rounded shadow-xl flex flex-col gap-2 text-sm uppercase">
+      <a href="#shop">Shop</a><a href="#benefits">The benefits</a><a href="#results">The results</a><a href="#science">Artemisia-Cicaâ„¢</a><a href="#ingredients">Key ingredients</a><a href="#community">Community</a><a href="#faq">FAQ</a><a href="#routine">Complete the routine</a>
+    </div>
+  </div>
+
+  <!-- Brand video â€” 16:9 -->
+  <section class="brand-video-section border-y" aria-label="Artemisia Soothing Toner film">
+    <div class="brand-video-wrap">
+      <video class="brand-video" src="assets/hy-08-brand-film.mp4" poster="assets/hy-08-brand-film-frame.jpg" autoplay muted loop playsinline preload="auto" aria-label="Serene skincare ritual â€” Artemisia Soothing Toner"></video>
+      <div class="brand-video-overlay">
+        <p class="brand-video-eyebrow">Artemisia Cicaâ„¢</p>
+        <h2 class="brand-video-title">Artemisia Soothing Toner</h2>
+        <p class="brand-video-sub">Baltic Bloom â€” Calm Â· Hydrate Â· Soothe</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• LARGE BENEFITS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="benefits" class="bg-white py-16 lg:py-24">
+    <div class="max-w-page mx-auto px-4 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] mb-4">Benefits</p>
+          <div id="benefits-carousel">
+            <div class="benefit-slide is-active">
+              <h2 class="font-display text-3xl lg:text-5xl font-light mb-4">Soothes Visible Redness</h2>
+              <p class="text-lg text-dark leading-relaxed">Ganghwa mugwort and centella help calm flare-ups, heat-prone cheeks, and post-cleanse tightness without stripping.</p>
+            </div>
+            <div class="benefit-slide">
+              <h2 class="font-display text-3xl lg:text-5xl font-light mb-4">Hydrates & Strengthens</h2>
+              <p class="text-lg text-dark leading-relaxed">Locks in all-day hydration and helps strengthen the skin barrier for plump, resilient, comfortable skin.</p>
+            </div>
+            <div class="benefit-slide">
+              <h2 class="font-display text-3xl lg:text-5xl font-light mb-4">Preps & Balances</h2>
+              <p class="text-lg text-dark leading-relaxed">Watery texture provides a smooth, radiant base for makeup and helps treatments absorb more evenly.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 mt-8">
+            <button class="benefit-prev w-10 h-10 border border-border rounded-full" aria-label="Previous benefit">â€¹</button>
+            <span id="benefit-count" class="text-sm tracking-wider">1/3</span>
+            <button class="benefit-next w-10 h-10 border border-border rounded-full" aria-label="Next benefit">â€º</button>
+          </div>
+        </div>
+        <div class="aspect-[4/5] rounded-sm overflow-hidden border border-border">
+          <img src="assets/hy-08-benefits.jpg" alt="Mugwort toner with botanical ingredients and hydrated skin texture" class="media-cover" width="800" height="1000" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• THE RESULTS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="results" class="bg-stone py-16 lg:py-24">
+    <div class="max-w-page mx-auto px-4 lg:px-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-center mb-3">The Results</p>
+      <h2 class="font-display text-3xl lg:text-5xl font-light text-center mb-12">Clinically measured calm</h2>
+
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <div id="results-carousel">
+            <div class="result-slide is-active">
+              <h3 class="font-display text-2xl mb-2">Locks in Hydration</h3>
+              <p class="text-4xl lg:text-5xl font-light mb-4">100% <span class="text-lg text-muted">felt more hydrated</span></p>
+              <button class="trial-open text-sm uppercase tracking-wider underline underline-offset-4" data-modal="trial-modal">View Full Trial Results</button>
+            </div>
+            <div class="result-slide">
+              <h3 class="font-display text-2xl mb-2">Calms Redness</h3>
+              <p class="text-4xl lg:text-5xl font-light mb-4">94% <span class="text-lg text-muted">redness visibly reduced</span></p>
+              <button class="trial-open text-sm uppercase tracking-wider underline underline-offset-4" data-modal="trial-modal">View Full Trial Results</button>
+            </div>
+            <div class="result-slide">
+              <h3 class="font-display text-2xl mb-2">Smooths Texture</h3>
+              <p class="text-4xl lg:text-5xl font-light mb-4">71% <span class="text-lg text-muted">texture improvement</span></p>
+              <button class="trial-open text-sm uppercase tracking-wider underline underline-offset-4" data-modal="trial-modal">View Full Trial Results</button>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 mt-8">
+            <button class="result-prev w-10 h-10 border border-border rounded-full bg-white" aria-label="Previous">â€¹</button>
+            <span id="result-count" class="text-sm">1/3</span>
+            <button class="result-next w-10 h-10 border border-border rounded-full bg-white" aria-label="Next">â€º</button>
+          </div>
+        </div>
+
+        <!-- Before / After -->
+        <div class="space-y-4">
+          <div class="ba-slider relative aspect-[4/3] rounded-sm overflow-hidden border border-border" data-ba>
+            <div class="ba-layer ba-before absolute inset-0">
+              <img src="assets/hy-09-ba1-before.jpg" alt="Before â€” visible redness and dryness" width="800" height="600" loading="lazy" data-ba-before />
+            </div>
+            <div class="ba-after ba-layer absolute inset-0">
+              <img src="assets/hy-09-ba1-after.jpg" alt="After 4 weeks â€” calmer, more hydrated skin" width="800" height="600" loading="lazy" data-ba-after />
+            </div>
+            <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-4 right-4 z-10 ba-range" aria-label="Compare before and after" />
+            <div class="absolute top-3 left-3 text-[0.65rem] uppercase tracking-wider bg-white/90 px-2 py-1">Before</div>
+            <div class="absolute top-3 right-3 text-[0.65rem] uppercase tracking-wider bg-white/90 px-2 py-1">After</div>
+          </div>
+          <div class="flex justify-center gap-2">
+            <button class="ba-pair-btn w-2.5 h-2.5 rounded-full bg-ink" data-pair="0" aria-label="Results pair 1"></button>
+            <button class="ba-pair-btn w-2.5 h-2.5 rounded-full bg-border" data-pair="1" aria-label="Results pair 2"></button>
+            <button class="ba-pair-btn w-2.5 h-2.5 rounded-full bg-border" data-pair="2" aria-label="Results pair 3"></button>
+          </div>
+          <p class="text-sm text-muted text-center">4-week consumer study â€” hydration, redness &amp; texture improvement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trial modal -->
+  <div id="trial-modal" class="modal fixed inset-0 z-[120] items-center justify-center p-4 bg-black/50">
+    <div class="bg-white max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 rounded-sm relative">
+      <button class="modal-close absolute top-4 right-4 text-2xl" aria-label="Close">Ã—</button>
+      <h3 class="font-display text-2xl mb-6">Full Trial Results</h3>
+      <p class="text-xs uppercase tracking-wider text-muted mb-4">Clinically Proven Results*</p>
+      <div class="space-y-6 text-sm leading-relaxed text-dark">
+        <div>
+          <strong class="block uppercase tracking-wider mb-2">Hydration & Calm</strong>
+          <p>100% showed improved hydration levels</p>
+          <p>94% showed a reduction in visible redness</p>
+          <p>92% reported skin feels soothed after first use</p>
+        </div>
+        <div>
+          <strong class="block uppercase tracking-wider mb-2">Barrier & Balance</strong>
+          <p>89% felt skin barrier is stronger after 4 weeks</p>
+          <p>97% said skin looks more balanced and healthy</p>
+        </div>
+        <div>
+          <strong class="block uppercase tracking-wider mb-2">Texture & Prep</strong>
+          <p>71% improvement in skin texture and smoothness</p>
+          <p>88% noticed makeup applies more evenly</p>
+        </div>
+        <p class="text-xs text-muted italic">*In a 4-week consumer perception study of 80 participants, ages 18â€“45, with self-perceived sensitive, redness-prone skin.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• BREAKTHROUGH SCIENCE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="science" class="relative bg-mint-dark text-white py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0 opacity-30"><img src="assets/hy-12-science.jpg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
+    <div class="absolute inset-0 bg-mint-dark/75"></div>
+    <div class="max-w-page mx-auto px-4 lg:px-8 relative grid lg:grid-cols-2 gap-10 items-center">
+      <div class="aspect-video lg:aspect-square rounded-sm overflow-hidden border border-white/20 shadow-2xl">
+        <img src="assets/hy-12-science.jpg" alt="Artemisia-Cica botanical science visual" class="media-cover" width="800" height="800" loading="lazy" />
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-[0.2em] text-mint mb-4">Breakthrough Science</p>
+        <h2 class="font-display text-4xl lg:text-6xl font-light mb-6">Artemisia-Cicaâ„¢</h2>
+        <p class="text-lg text-white/85 leading-relaxed mb-8">Baltic Bloom is powered by Artemisia-Cicaâ„¢, a proprietary complex tailored for sensitized, barrier-compromised skin. It delivers soothing signals in a measured way and promotes the skin's natural health by supporting its barrier and enhancing long-term resilience.</p>
+        <a href="#" class="inline-flex min-h-[48px] items-center px-8 border border-white text-sm uppercase tracking-wider hover:bg-white hover:text-ink transition">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Claims ticker -->
+  <section class="py-4 overflow-hidden border-y border-border bg-white">
+    <div class="ticker-track flex whitespace-nowrap w-max text-[0.78rem] uppercase tracking-[0.14em] text-muted font-medium">
+      <span class="mx-6">Vegan</span><span class="mx-6">Cruelty-free</span><span class="mx-6">Fragrance-free</span><span class="mx-6">Sensitive skin-safe</span><span class="mx-6">Dermatologist-tested</span><span class="mx-6">Non-comedogenic</span><span class="mx-6">Clean</span>
+      <span class="mx-6">Vegan</span><span class="mx-6">Cruelty-free</span><span class="mx-6">Fragrance-free</span><span class="mx-6">Sensitive skin-safe</span><span class="mx-6">Dermatologist-tested</span><span class="mx-6">Non-comedogenic</span><span class="mx-6">Clean</span>
+      <span class="mx-6">Vegan</span><span class="mx-6">Cruelty-free</span><span class="mx-6">Fragrance-free</span><span class="mx-6">Sensitive skin-safe</span><span class="mx-6">Dermatologist-tested</span><span class="mx-6">Non-comedogenic</span><span class="mx-6">Clean</span>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• KEY INGREDIENTS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="ingredients" class="py-16 lg:py-24 bg-offwhite" style="background:#faf8f5">
+    <div class="max-w-page mx-auto px-4 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+        <div class="aspect-square rounded-sm overflow-hidden border border-border">
+          <img src="assets/hy-13-ingredients.jpg" alt="Mugwort and centella ingredient flatlay with toner bottle" class="media-cover" width="800" height="800" loading="lazy" />
+        </div>
+        <div>
+          <h2 class="font-display text-3xl lg:text-5xl font-light mb-8">Key Ingredients</h2>
+          <details class="border-t border-ink py-4 group" open>
+            <summary class="flex justify-between cursor-pointer list-none font-display text-xl"><span>Ganghwa Artemisia Water</span><span class="acc-icon text-muted">+</span></summary>
+            <p class="pt-3 text-dark leading-relaxed">Traditional Korean mugwort harvested on Ganghwa Island â€” revered for calming visible redness and balancing reactive skin.</p>
+          </details>
+          <details class="border-t border-ink py-4 group">
+            <summary class="flex justify-between cursor-pointer list-none font-display text-xl"><span>Centella Asiatica</span><span class="acc-icon text-muted">+</span></summary>
+            <p class="pt-3 text-dark leading-relaxed">Supports barrier recovery, reduces the look of stress-induced redness, and pairs with mugwort for soothe + strengthen.</p>
+          </details>
+          <details class="border-t border-ink py-4 group">
+            <summary class="flex justify-between cursor-pointer list-none font-display text-xl"><span>Panthenol + Glycerin</span><span class="acc-icon text-muted">+</span></summary>
+            <p class="pt-3 text-dark leading-relaxed">Draws water into skin without a waxy film â€” essential humectants for a lightweight, calming facial toner.</p>
+          </details>
+          <details class="border-t border-ink py-4 group">
+            <summary class="flex justify-between cursor-pointer list-none font-display text-xl"><span>Lactobacillus Ferment</span><span class="acc-icon text-muted">+</span></summary>
+            <p class="pt-3 text-dark leading-relaxed">Postbiotic care that supports microbiome balance for skin that stays calm, not just moisturized.</p>
+          </details>
+          <details class="border-t border-b border-ink py-4 group">
+            <summary class="flex justify-between cursor-pointer list-none font-display text-xl"><span>Microbiome Balance Complex</span><span class="acc-icon text-muted">+</span></summary>
+            <p class="pt-3 text-dark leading-relaxed">Helps rebalance and soothe blemish-prone, reactive skin without disrupting your routine.</p>
+          </details>
+          <button id="inci-toggle" class="mt-6 text-sm uppercase tracking-wider underline underline-offset-4">See full ingredients list</button>
+          <div id="inci-full" class="hidden mt-4 p-5 bg-white border border-border text-sm leading-relaxed text-dark rounded-sm">
+            Water, Artemisia Princeps Extract, Centella Asiatica Extract, Glycerin, Panthenol, Butylene Glycol, 1,2-Hexanediol, Lactobacillus Ferment, Ethylhexylglycerin, Citric Acid.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-page mx-auto px-4 lg:px-8 text-center mb-10">
+      <p class="text-xs uppercase tracking-[0.2em] text-muted mb-2">Baltic Bloom + You</p>
+      <h2 class="font-display text-3xl lg:text-4xl font-light mb-3">The Community</h2>
+      <p class="text-dark max-w-xl mx-auto">Powered by real science, made for real life. Discover how our community incorporate Baltic Bloom into their daily rituals.</p>
+    </div>
+    <div class="max-w-page mx-auto px-4 lg:px-8 grid md:grid-cols-3 gap-6">
+      <article class="group">
+        <div class="aspect-[3/4] rounded-sm mb-3 relative overflow-hidden">
+          <video class="ugc-video" src="assets/hy-14-ugc-1.mp4" poster="assets/hy-14-ugc-1-frame.jpg" autoplay loop muted playsinline aria-label="Customer applying toner at home"></video>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition pointer-events-none"></div>
+        </div>
+        <p class="text-sm font-medium">@sarahm</p>
+        <p class="text-xs text-muted">My nightly calming ritual</p>
+      </article>
+      <article class="group">
+        <div class="aspect-[3/4] rounded-sm mb-3 overflow-hidden">
+          <video class="ugc-video" src="assets/hy-15-ugc-2.mp4" poster="assets/hy-15-ugc-2-frame.jpg" autoplay loop muted playsinline aria-label="Customer layering toner after cleansing"></video>
+        </div>
+        <p class="text-sm font-medium">@amyc</p>
+        <p class="text-xs text-muted">Layering twice after cleansing</p>
+      </article>
+      <article class="group">
+        <div class="aspect-[3/4] rounded-sm mb-3 overflow-hidden border border-border">
+          <video class="ugc-video" src="assets/hy-16-ugc-3.mp4" poster="assets/hy-16-ugc-3-frame.jpg" autoplay loop muted playsinline aria-label="Customer daily skincare routine with toner"></video>
+        </div>
+        <p class="text-sm font-medium">@elenak</p>
+        <p class="text-xs text-muted">Never without this toner</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FAQ â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="faq" class="py-16 lg:py-24 bg-stone">
+    <div class="max-w-page mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-10">
+      <div class="aspect-[4/5] rounded-sm hidden lg:block overflow-hidden border border-border">
+        <img src="assets/hy-17-faq.jpg" alt="Calming product shot for FAQ section" class="media-cover" width="640" height="800" loading="lazy" />
+      </div>
+      <div>
+        <h2 class="font-display text-3xl lg:text-5xl font-light mb-8">FAQs</h2>
+        <details class="border-t border-ink py-4 group">
+          <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>Where does this fit in my daily routine?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
+          <p class="pt-3 text-dark leading-relaxed">Use immediately after cleansing, before serum and moisturizer â€” morning and night. It preps skin and locks in hydration without heaviness.</p>
+        </details>
+        <details class="border-t border-ink py-4 group">
+          <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>Which skin types is it suitable for?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
+          <p class="pt-3 text-dark leading-relaxed">Designed for all skin types â€” including sensitive, reactive, and acne-prone. Non-comedogenic and tested on diverse skin needs.</p>
+        </details>
+        <details class="border-t border-ink py-4 group">
+          <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>Has it undergone testing?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
+          <p class="pt-3 text-dark leading-relaxed">Yes. Dermatologist-tested with independent consumer studies. 4.6â˜… average from 120 verified reviews.</p>
+        </details>
+        <details class="border-t border-ink py-4 group">
+          <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>Is it vegan and fragrance-free?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
+          <p class="pt-3 text-dark leading-relaxed">Yes. Vegan, fragrance-free, and formulated without sulfates, parabens, or mineral oil. Light natural mugwort note only.</p>
+        </details>
+        <details class="border-t border-b border-ink py-4 group">
+          <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>What is Artemisia-Cicaâ„¢ and how does it work?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
+          <p class="pt-3 text-dark leading-relaxed">A proprietary complex combining Ganghwa mugwort water and centella asiatica. Mugwort delivers instant soothing signals; centella supports barrier recovery over time â€” measured, not diluted across dozens of actives.</p>
+        </details>
+        <a href="#" class="inline-block mt-6 text-sm uppercase tracking-wider underline">Read all FAQs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete The Routine (bottom carousel) -->
+  <section id="routine" class="py-16 lg:py-24 bg-white border-t border-border">
+    <div class="max-w-page mx-auto px-4 lg:px-8">
+      <h2 class="font-display text-3xl lg:text-4xl font-light text-center mb-10">Complete The Routine</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="text-center group">
+          <div class="aspect-square rounded-sm mb-4 relative overflow-hidden">
+            <img src="assets/hy-20-routine-cleanser.jpg" alt="Balancing Cream Cleanser" class="media-cover" width="400" height="400" loading="lazy" />
+            <span class="absolute top-3 left-3 text-[0.65rem] uppercase tracking-wider bg-white px-2 py-1">Balance</span>
+          </div>
+          <h3 class="font-display text-xl mb-1">Balancing Cream Cleanser</h3>
+          <p class="text-sm text-muted mb-2">Gentle, clarifying cream-to-foam cleanser</p>
+          <p class="font-medium mb-4">â‚¬32,00</p>
+          <button class="min-h-[44px] px-6 border border-ink text-xs uppercase tracking-wider hover:bg-ink hover:text-white transition">Quick Shop</button>
+        </article>
+        <article class="text-center group">
+          <div class="aspect-square rounded-sm mb-4 relative overflow-hidden">
+            <img src="assets/hy-19-routine-serum.jpg" alt="Artemisia Calming Serum" class="media-cover" width="400" height="400" loading="lazy" />
+            <span class="absolute top-3 left-3 text-[0.65rem] uppercase tracking-wider bg-white px-2 py-1">Activate</span>
+          </div>
+          <h3 class="font-display text-xl mb-1">Artemisia Calming Serum</h3>
+          <p class="text-sm text-muted mb-2">Barrier-supporting soothing serum</p>
+          <p class="font-medium mb-4">â‚¬48,00</p>
+          <button class="min-h-[44px] px-6 border border-ink text-xs uppercase tracking-wider hover:bg-ink hover:text-white transition">Quick Shop</button>
+        </article>
+        <article class="text-center group">
+          <div class="aspect-square rounded-sm mb-4 relative overflow-hidden">
+            <img src="assets/hy-01-packshot.jpg" alt="Mugwort Calm Hydrating Toner" class="media-cover" width="400" height="400" loading="lazy" />
+            <span class="absolute top-3 left-3 text-[0.65rem] uppercase tracking-wider bg-white px-2 py-1">Calm</span>
+          </div>
+          <h3 class="font-display text-xl mb-1">Mugwort Calm Hydrating Toner</h3>
+          <p class="text-sm text-muted mb-2">Lightweight soothing facial toner</p>
+          <p class="font-medium mb-4">â‚¬24,90</p>
+          <button class="min-h-[44px] px-6 bg-ink text-white text-xs uppercase tracking-wider hover:bg-mint-dark transition">Add to Bag</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• REVIEWS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="reviews" class="py-16 lg:py-24 bg-cream border-t border-border">
+    <div class="max-w-page mx-auto px-4 lg:px-8">
+      <p class="mb-2"><strong>Overall rating:</strong> 4.6 / 5 from 120 reviews.</p>
+
+      <div class="grid lg:grid-cols-2 gap-10 mb-12">
+        <div>
+          <h3 class="font-display text-xl mb-3">AI Generated Review Summary</h3>
+          <p class="text-dark leading-relaxed mb-6">Mugwort Calm Hydrating Toner is a highly regarded soothing facial toner that delivers weightless hydration and visible calm. Its watery texture is deeply appreciated by customers with sensitive skin, offering moisture without stickiness or stinging.</p>
+          <h4 class="text-sm uppercase tracking-wider mb-2">Summary topics</h4>
+          <ul class="text-sm text-dark space-y-1 mb-4">
+            <li>Texture: 22%</li>
+            <li>Hydration & Calm: 31%</li>
+            <li>Sensitive skin: 18%</li>
+          </ul>
+          <p class="text-xs text-muted">Review topics: ["redness","sensitive","texture","toner","calm"]</p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl mb-4">Review highlights</h3>
+          <ul class="space-y-4 text-dark">
+            <li class="italic">"Finally a toner that doesn't sting. My cheeks look calmer by morning." â€” Elena K.</li>
+            <li class="italic">"I layer it three times â€” plump skin, zero stickiness." â€” Amy C.</li>
+            <li class="italic">"Replaced my essence and toner in one step. Makeup sits better." â€” Sarah M.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="font-display text-2xl mb-8">Reviews</h3>
+      <div class="space-y-8 max-w-3xl">
+        <article class="border-b border-border pb-8">
+          <h4 class="font-semibold mb-2">Holy grail for reactive skin</h4>
+          <p class="text-gold text-sm mb-2">â˜…â˜…â˜…â˜…â˜…</p>
+          <p class="text-dark leading-relaxed mb-3">"The texture is incredible â€” so light and watery without feeling like nothing. I use it after cleansing morning and night. My redness visibly calms within minutes and my skin feels balanced all day. Officially my forever toner."</p>
+          <p class="text-sm text-muted">â€” Claire P.</p>
+        </article>
+        <article class="border-b border-border pb-8">
+          <h4 class="font-semibold mb-2">Perfect for oily-sensitive combo</h4>
+          <p class="text-gold text-sm mb-2">â˜…â˜…â˜…â˜…â˜…</p>
+          <p class="text-dark leading-relaxed mb-3">"A little goes a long way. I have oily, reactive skin and this hydrates without breakouts or grease. Exactly what I needed between cleanser and serum."</p>
+          <p class="text-sm text-muted">â€” Zinet M.</p>
+        </article>
+        <article class="border-b border-border pb-8">
+          <h4 class="font-semibold mb-2">Sensitive skin approved</h4>
+          <p class="text-gold text-sm mb-2">â˜…â˜…â˜…â˜…â˜…</p>
+          <p class="text-dark leading-relaxed mb-3">"I have very sensitive skin and most toners make me flare up. This one didn't. Visible results in a few weeks â€” calmer, more even tone. Already repurchased."</p>
+          <p class="text-sm text-muted">â€” Krista E.</p>
+        </article>
+        <article class="border-b border-border pb-8">
+          <h4 class="font-semibold mb-2">Lightweight luxury</h4>
+          <p class="text-gold text-sm mb-2">â˜…â˜…â˜…â˜…â˜…</p>
+          <p class="text-dark leading-relaxed mb-3">"Amazing texture â€” hydration without any heaviness. Perfect base under makeup. The frosted bottle looks beautiful on my shelf too."</p>
+          <p class="text-sm text-muted">â€” Gabriel L.</p>
+        </article>
+        <article>
+          <h4 class="font-semibold mb-2">Calm, not compromise</h4>
+          <p class="text-gold text-sm mb-2">â˜…â˜…â˜…â˜…â˜†</p>
+          <p class="text-dark leading-relaxed mb-3">"Leaves my skin moisturised but never greasy. I layer twice on dry days â€” the 7-skin method works beautifully with this formula."</p>
+          <p class="text-sm text-muted">â€” Ashley B.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="bb-footer" id="site-footer">
+    <div class="bb-footer__accent" aria-hidden="true"></div>
+    <div class="bb-footer__content">
+      <div class="bb-footer__masthead">
+        <div class="bb-footer__brand">
+          <p class="bb-footer__eyebrow">Baltic Bloom</p>
+          <h2 class="bb-footer__wordmark font-display">Artemisia-Cicaâ„¢ Science</h2>
+          <p class="bb-footer__tagline">Holistic Baltic skincare for sensitive, barrier-focused skin â€” thoughtfully formulated with ganghwa mugwort and centella.</p>
+        </div>
+        <div class="bb-footer__newsletter">
+          <div class="bb-footer__newsletter-head">
+            <h3>Sign up for news &amp; exclusive stories</h3>
+            <p>Exclusive rituals, new releases &amp; science notes. No spam, ever.</p>
+          </div>
+          <form class="bb-newsletter" onsubmit="event.preventDefault(); alert('Newsletter signup â€” preview only.');">
+            <div class="bb-newsletter__row">
+              <label class="sr-only" for="footer-email">Email address</label>
+              <input id="footer-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              <button type="submit" class="bb-newsletter__submit">Subscribe</button>
+            </div>
+          </form>
+          <p class="bb-newsletter__disclaimer">By subscribing you agree to our <a href="#" class="underline">Terms</a> &amp; <a href="#" class="underline">Privacy Policy</a>.</p>
+        </div>
+      </div>
+
+      <div class="bb-footer__links-grid">
+        <div class="bb-footer__col">
+          <h4>Shop</h4>
+          <a href="#shop">Mugwort Calm Toner</a>
+          <a href="#routine">Complete The Routine</a>
+          <a href="#">All Skincare</a>
+          <a href="#">Gift Sets</a>
+        </div>
+        <div class="bb-footer__col">
+          <h4>Explore</h4>
+          <a href="#">About</a>
+          <a href="#">Journal</a>
+          <a href="#science">The Science</a>
+          <a href="#ingredients">Ingredients</a>
+          <a href="#results">Clinical Results</a>
+        </div>
+        <div class="bb-footer__col">
+          <h4>Support</h4>
+          <a href="#faq">FAQ</a>
+          <a href="#">Contact</a>
+          <a href="#">Shipping Policy</a>
+          <a href="#">Returns &amp; Refunds</a>
+          <a href="#">Track Order</a>
+        </div>
+        <div class="bb-footer__col">
+          <h4>Connect</h4>
+          <div class="bb-footer__social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.01a8.16 8.16 0 0 0 4.77 1.52V7.08a4.85 4.85 0 0 1-1-.39z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+          </div>
+          <p class="bb-footer__trust" style="margin-top:1rem;font-size:0.72rem;color:rgba(255,255,255,0.45)">Vegan Â· Cruelty-free Â· Dermatologist tested</p>
+        </div>
+      </div>
+
+      <div class="bb-footer__payments">
+        <span class="bb-footer__payments-label">We accept</span>
+        <div class="bb-footer__payments-icons">
+          <span class="bb-pay-icon" aria-label="Visa">
+            <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="48" height="32" rx="4" fill="#fff"/><path fill="#1A1F71" d="M19.2 21h-3l1.9-11.4h3L19.2 21zm13.1-11.1c-.6-.2-1.6-.5-2.8-.5-3.1 0-5.2 1.6-5.2 3.9 0 1.7 1.6 2.6 2.8 3.2 1.2.6 1.7 1 1.7 1.5 0 .8-1 1.2-2 1.2-1.3 0-2-.3-3.1-.9l-.4-.2-.5 2.8c.8.3 2.2.6 3.7.6 3.3 0 5.4-1.6 5.5-4 .1-1.4-1-2.4-2.5-3.1-1-.5-1.7-.9-1.7-1.4 0-.5.5-.9 1.6-.9 1 0 1.7.2 2.2.4l.3.1.5-2.7zm8.2-.3h-2.3c-.7 0-1.3.4-1.5 1l-4.3 10.4h3.2l.6-1.7h3.9l.4 1.7H43l-2.5-11.4zm-3.4 7.4l1.6-4.4.9 4.4h-2.5zM15 9.6l-3 11.4h-3.2L8.4 13c-.3-1.2-.6-1.6-1.5-2.2-1.5-1-3.9-1.9-6-2.5l.1-.3h5.2c.7 0 1.3.5 1.4 1.1l1.2 6.4 3-7.9H15z"/></svg>
+          </span>
+          <span class="bb-pay-icon" aria-label="Mastercard">
+            <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="48" height="32" rx="4" fill="#fff"/><circle cx="19" cy="16" r="9" fill="#EB001B"/><circle cx="29" cy="16" r="9" fill="#F79E1B"/><path fill="#FF5F00" d="M24 8.4a9 9 0 0 0-3.4 7.6A9 9 0 0 0 24 23.6a9 9 0 0 0 3.4-7.6A9 9 0 0 0 24 8.4z"/></svg>
+          </span>
+          <span class="bb-pay-icon" aria-label="American Express">
+            <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="48" height="32" rx="4" fill="#016FD0"/><text x="24" y="13" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="6.5" font-weight="700" fill="#fff">AMERICAN</text><text x="24" y="21.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="6.5" font-weight="700" fill="#fff">EXPRESS</text></svg>
+          </span>
+          <span class="bb-pay-icon" aria-label="Apple Pay">
+            <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="48" height="32" rx="4" fill="#fff"/><path fill="#000" d="M13.6 10.8c-.7.8-1.8 1.5-2.9 1.4-.1-1.2.4-2.4 1.1-3.2.7-.9 1.9-1.5 2.9-1.6.1 1.3-.4 2.5-1.1 3.4zm1 1.5c-1.6-.1-3 .9-3.8.9-.8 0-1.9-.8-3.2-.8-1.6 0-3.1.9-4 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.1 1.7 2.4 3 2.4 1.2 0 1.6-.8 3-.8 1.4 0 1.8.8 3 .8 1.2 0 2-1.1 2.8-2.2.9-1.3 1.2-2.6 1.2-2.7-.1 0-2.4-.9-2.4-3.6 0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8z"/><text x="30" y="21" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="600" fill="#000">Pay</text></svg>
+          </span>
+          <span class="bb-pay-icon" aria-label="Google Pay">
+            <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="48" height="32" rx="4" fill="#fff"/><text x="5" y="20.5" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700"><tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC04">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan></text><text x="33" y="20.5" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="600" fill="#3C4043">Pay</text></svg>
+          </span>
+          <span class="bb-pay-icon" aria-label="PayPal">
+            <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="48" height="32" rx="4" fill="#fff"/><text x="8" y="21" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" font-style="italic" fill="#003087">Pay</text><text x="22" y="21" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" font-style="italic" fill="#009CDE">Pal</text></svg>
+          </span>
+          <span class="bb-pay-icon" aria-label="Shop Pay">
+            <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="48" height="32" rx="4" fill="#5A31F4"/><text x="11" y="20.5" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" fill="#fff">shop</text><text x="30" y="20.5" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="600" fill="#fff">Pay</text></svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="bb-footer__bottom">
+        <div class="bb-footer__legal">
+          <span>Â© 2026 Baltic Bloom</span>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Shipping Policy</a>
+          <a href="#">Returns</a>
+        </div>
+        <div class="bb-footer__locale-row">
+          <div class="bb-locale-wrap">
+            <button type="button" class="bb-locale-btn" id="region-toggle" aria-expanded="false" aria-haspopup="listbox">
+              <svg width="14" height="10" viewBox="0 0 14 10" aria-hidden="true"><rect width="14" height="10" fill="#003399"/><g fill="#FFCC00"><circle cx="7" cy="5" r="2.2"/></g></svg>
+              <span class="bb-locale-label">EU Â· EUR</span>
+            </button>
+            <div class="bb-locale-panel" id="region-panel" role="listbox">
+              <button type="button" data-region="EU Â· EUR">EU Â· EUR</button>
+              <button type="button" data-region="GB Â· GBP">United Kingdom Â· GBP</button>
+              <button type="button" data-region="US Â· USD">United States Â· USD</button>
+              <button type="button" data-region="EE Â· EUR">Estonia Â· EUR</button>
+            </div>
+          </div>
+          <div class="bb-locale-wrap">
+            <button type="button" class="bb-locale-btn" id="lang-toggle" aria-expanded="false" aria-haspopup="listbox">
+              <svg width="14" height="10" viewBox="0 0 14 10" aria-hidden="true"><rect width="14" height="10" fill="#012169"/><path d="M0 0l14 10M14 0L0 10" stroke="#fff" stroke-width="1.2"/></svg>
+              <span class="bb-locale-label">English</span>
+            </button>
+            <div class="bb-locale-panel" id="lang-panel" role="listbox">
+              <button type="button" data-lang="English">English</button>
+              <button type="button" data-lang="Eesti">Eesti</button>
+              <button type="button" data-lang="Deutsch">Deutsch</button>
+              <button type="button" data-lang="FranÃ§ais">FranÃ§ais</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky ATC -->
+  <div id="sticky-atc" class="sticky-atc fixed bottom-0 left-0 right-0 z-40 bg-stone rounded-t-lg p-3 lg:flex lg:justify-end border-t border-border">
+    <div class="max-w-page mx-auto w-full lg:flex lg:justify-end">
+      <button class="w-full lg:max-w-[22rem] min-h-[52px] bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium">Add to Bag â€” â‚¬24,90</button>
+    </div>
+  </div>
+
+  <script>
+    // Drawer
+    const drawer = document.getElementById('drawer');
+    const openDrawer = () => { drawer.classList.add('pointer-events-auto'); drawer.querySelector('#drawer-overlay').classList.add('opacity-100'); drawer.querySelector('#drawer-panel').classList.remove('-translate-x-full'); };
+    const closeDrawer = () => { drawer.classList.remove('pointer-events-auto'); drawer.querySelector('#drawer-overlay').classList.remove('opacity-100'); drawer.querySelector('#drawer-panel').classList.add('-translate-x-full'); };
+    document.getElementById('menu-open')?.addEventListener('click', openDrawer);
+    document.getElementById('menu-close')?.addEventListener('click', closeDrawer);
+    document.getElementById('drawer-overlay')?.addEventListener('click', closeDrawer);
+
+    // Gallery
+    let gIdx = 0;
+    const gSlides = document.querySelectorAll('.gallery-slide');
+    const gThumbs = document.querySelectorAll('.thumb');
+    const gCount = document.getElementById('gallery-count');
+    const showSlide = (i) => {
+      gIdx = (i + gSlides.length) % gSlides.length;
+      gSlides.forEach((s, j) => {
+        s.classList.toggle('is-active', j === gIdx);
+        const v = s.querySelector('video');
+        if (v) { j === gIdx ? v.play().catch(() => {}) : (v.pause(), v.currentTime = 0); }
+      });
+      gThumbs.forEach((t, j) => t.classList.toggle('is-active', j === gIdx));
+      if (gCount) gCount.textContent = `${gIdx + 1}/${gSlides.length}`;
+    };
+    document.querySelectorAll('.gallery-prev').forEach(b => b.addEventListener('click', () => showSlide(gIdx - 1)));
+    document.querySelectorAll('.gallery-next').forEach(b => b.addEventListener('click', () => showSlide(gIdx + 1)));
+    gThumbs.forEach(t => t.addEventListener('click', () => showSlide(+t.dataset.thumb)));
+
+    // Before/after pairs
+    const baPairs = [
+      { before: 'assets/hy-09-ba1-before.jpg', after: 'assets/hy-09-ba1-after.jpg', bAlt: 'Before â€” visible redness', aAlt: 'After â€” calmer hydrated skin' },
+      { before: 'assets/hy-10-ba2-before.jpg', after: 'assets/hy-10-ba2-after.jpg', bAlt: 'Before â€” uneven texture', aAlt: 'After â€” smoother skin texture' },
+      { before: 'assets/hy-11-ba3-before.jpg', after: 'assets/hy-11-ba3-after.jpg', bAlt: 'Before â€” dehydrated irritated skin', aAlt: 'After â€” supple even-toned skin' },
+    ];
+    const baBefore = document.querySelector('[data-ba-before]');
+    const baAfter = document.querySelector('[data-ba-after]');
+    const baBtns = document.querySelectorAll('.ba-pair-btn');
+    const setBaPair = (idx) => {
+      const p = baPairs[idx];
+      if (!p || !baBefore || !baAfter) return;
+      baBefore.src = p.before; baBefore.alt = p.bAlt;
+      baAfter.src = p.after; baAfter.alt = p.aAlt;
+      baBtns.forEach((b, j) => {
+        b.classList.toggle('bg-ink', j === idx);
+        b.classList.toggle('bg-border', j !== idx);
+      });
+    };
+
+    // Carousels
+    const carousel = (slides, prev, next, countEl, onChange) => {
+      let i = 0;
+      const show = (n) => {
+        i = (n + slides.length) % slides.length;
+        slides.forEach((s, j) => s.classList.toggle('is-active', j === i));
+        if (countEl) countEl.textContent = `${i + 1}/${slides.length}`;
+        onChange?.(i);
+      };
+      prev?.addEventListener('click', () => show(i - 1));
+      next?.addEventListener('click', () => show(i + 1));
+      return show;
+    };
+    carousel(document.querySelectorAll('.benefit-slide'), document.querySelector('.benefit-prev'), document.querySelector('.benefit-next'), document.getElementById('benefit-count'));
+    carousel(document.querySelectorAll('.result-slide'), document.querySelector('.result-prev'), document.querySelector('.result-next'), document.getElementById('result-count'), setBaPair);
+    baBtns.forEach(b => b.addEventListener('click', () => setBaPair(+b.dataset.pair)));
+
+    // Modal
+    document.querySelectorAll('.trial-open').forEach(b => b.addEventListener('click', () => document.getElementById(b.dataset.modal)?.classList.add('is-open')));
+    document.querySelectorAll('.modal-close').forEach(b => b.addEventListener('click', () => b.closest('.modal')?.classList.remove('is-open')));
+    document.querySelectorAll('.modal').forEach(m => m.addEventListener('click', e => { if (e.target === m) m.classList.remove('is-open'); }));
+
+    // INCI toggle
+    document.getElementById('inci-toggle')?.addEventListener('click', () => document.getElementById('inci-full')?.classList.toggle('hidden'));
+
+    // Before/after slider
+    document.querySelectorAll('.ba-range').forEach(r => r.addEventListener('input', e => {
+      const pct = e.target.value;
+      e.target.closest('[data-ba]')?.querySelector('.ba-after')?.style.setProperty('clip-path', `inset(0 ${100 - pct}% 0 0)`);
+    }));
+
+    // Chapters
+    const chMenu = document.getElementById('chapters-menu');
+    const chPanel = document.getElementById('chapters-panel');
+    const chBg = document.getElementById('chapters-bg');
+    const toggleCh = (open) => {
+      chMenu.classList.toggle('pointer-events-auto', open);
+      chBg?.classList.toggle('opacity-100', open);
+      chPanel?.classList.toggle('is-open', open);
+    };
+    document.getElementById('chapters-toggle-m')?.addEventListener('click', () => toggleCh(true));
+    chBg?.addEventListener('click', () => toggleCh(false));
+
+    // Sticky ATC
+    const sticky = document.getElementById('sticky-atc');
+    const shop = document.getElementById('shop');
+    if (sticky && shop) new IntersectionObserver(([e]) => sticky.classList.toggle('is-visible', !e.isIntersecting), { threshold: 0 }).observe(shop);
+
+    // Brand film â€” ensure playback (H.264; poster-only = codec mismatch before re-encode)
+    const brandVideo = document.querySelector('.brand-video');
+    if (brandVideo) {
+      brandVideo.muted = true;
+      const tryPlay = () => brandVideo.play().catch(() => {});
+      if (brandVideo.readyState >= 2) tryPlay();
+      else brandVideo.addEventListener('loadeddata', tryPlay, { once: true });
+    }
+
+    // Footer locale dropdowns
+    const localeSetup = (toggleId, panelId, attr) => {
+      const toggle = document.getElementById(toggleId);
+      const panel = document.getElementById(panelId);
+      if (!toggle || !panel) return;
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.querySelectorAll('.bb-locale-panel').forEach(p => { if (p !== panel) p.classList.remove('is-open'); });
+        panel.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', panel.classList.contains('is-open'));
+      });
+      panel.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => {
+        const val = btn.dataset[attr];
+        const label = toggle.querySelector('.bb-locale-label');
+        if (label && val) label.textContent = val;
+        panel.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }));
+    };
+    localeSetup('region-toggle', 'region-panel', 'region');
+    localeSetup('lang-toggle', 'lang-panel', 'lang');
+    document.addEventListener('click', () => document.querySelectorAll('.bb-locale-panel').forEach(p => p.classList.remove('is-open')));
+  </script>
+</body>
+</html>
