@@ -1,63 +1,31 @@
 # Mugwort Calm Toner Landing Page
 
-A premium product landing page for **Mugwort Calm Hydrating Toner** by Baltic Bloom — a fictional clean-beauty brand concept built as a portfolio piece for e-commerce and conversion-focused web design.
+**Live demo:** [ai-assistant-kira.github.io/mugwort-calm-toner-landing](https://ai-assistant-kira.github.io/mugwort-calm-toner-landing/)
 
-**Live demo:** [https://ai-assistant-kira.github.io/mugwort-calm-toner-landing/](https://ai-assistant-kira.github.io/mugwort-calm-toner-landing/)
+A premium e-commerce product landing page for **Mugwort Calm Hydrating Toner** by Baltic Bloom — a fictional clean-beauty brand created as a portfolio piece.
 
-## Overview
+## About the Project
 
-Single-page product experience covering the full purchase journey: hero gallery, brand film, benefits, clinical results, ingredient science, community content, FAQ, reviews, and a conversion-oriented footer. Designed with a calm, editorial aesthetic suited to high-end skincare.
+This single-page experience demonstrates conversion-focused layout and editorial design for high-end skincare: hero product gallery, brand film, benefits carousel, clinical results with before/after comparison, ingredient science, community content, FAQ, customer reviews, and a full storefront-style footer.
+
+The aesthetic follows a calm, minimal European clean-beauty direction — sage greens, warm cream tones, serif display typography, and generous whitespace.
 
 ## Tech Stack
 
-- **HTML5** — semantic structure and accessible markup
-- **Tailwind CSS** — utility-first styling via CDN
-- **Vanilla JavaScript** — gallery, carousels, before/after slider, sticky add-to-cart
-- **Google Fonts** — Playfair Display & Jost
+- HTML5
+- Tailwind CSS (CDN)
+- Vanilla JavaScript
+- Google Fonts — Playfair Display & Jost
 
-No build step required. Open `index.html` locally or deploy to any static host.
+## Features
 
-## Project Structure
+- Responsive product gallery with image and video slides
+- Sticky add-to-cart bar on scroll
+- Interactive before/after results slider
+- Accordion sections for benefits, usage, and ingredients
+- Autoplay brand film and community video modules
+- Accessible navigation with mobile drawer and chapter menu
 
-```
-mugwort-calm-toner-landing/
-├── index.html          # Main landing page
-├── assets/             # Product images and video
-├── README.md
-└── .gitignore
-```
+## Note
 
-## Local Preview
-
-Open `index.html` in a browser, or serve the folder with any static server:
-
-```bash
-# Python
-python -m http.server 8080
-
-# Node (npx)
-npx serve .
-```
-
-Then visit `http://localhost:8080`.
-
-## Deploy to GitHub Pages
-
-1. Create a new public repository named `mugwort-calm-toner-landing` on GitHub.
-2. Push this project to the `main` branch (see commands below).
-3. In the repository: **Settings → Pages**
-4. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-5. Select branch **`main`**, folder **`/ (root)`**, then **Save**.
-6. Wait 1–2 minutes. Your site will be live at:
-
-   `https://ai-assistant-kira.github.io/mugwort-calm-toner-landing/`
-
-## Notes
-
-- Demo only — no backend, checkout, or live store integration.
-- Media assets are included for self-contained hosting.
-- Fictional brand and product for portfolio demonstration.
-
-## License
-
-Portfolio demonstration project. All brand names and product copy are fictional.
+This is a design portfolio demonstration. Baltic Bloom and all product copy are fictional. No live checkout or backend is connected.

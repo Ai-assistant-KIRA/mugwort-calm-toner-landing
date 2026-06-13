@@ -1,7 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mugwort Calm Hydrating Toner — Baltic Bloom</title>
   <meta name="description" content="Lightweight calming mugwort toner for sensitive skin. Soothe redness, hydrate deeply, strengthen your barrier." />
@@ -36,8 +40,8 @@
     };
   </script>
   <style>
-    body { font-family: 'Jost', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+    body { font-family: 'Jost', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Playfair Display', 'Times New Roman', Georgia, serif; }
     details summary::-webkit-details-marker { display: none; }
     details[open] .acc-icon { transform: rotate(45deg); }
     .acc-icon { transition: transform 0.3s ease; }
@@ -129,11 +133,8 @@
 </head>
 <body class="bg-white text-ink antialiased">
 
-  <!-- Preview banner -->
-  <div class="bg-ink text-white text-center text-[0.68rem] tracking-[0.12em] uppercase py-2 px-4 font-medium">Local preview only â€” not published to Shopify</div>
-
   <!-- Announcement -->
-  <div class="bg-ink text-white/90 text-[0.68rem] tracking-[0.12em] uppercase py-2 text-center font-medium">Free Standard Shipping on Orders Over â‚¬50</div>
+  <div class="bg-ink text-white/90 text-[0.68rem] tracking-[0.12em] uppercase py-2 text-center font-medium">Free Standard Shipping on Orders Over €50</div>
 
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/98 border-b border-border">
@@ -158,7 +159,7 @@
     <div id="drawer-panel" class="absolute top-0 left-0 w-[min(22rem,90vw)] h-full bg-white -translate-x-full transition-transform p-8 overflow-y-auto">
       <div class="flex justify-between items-center mb-5">
         <span class="font-display text-xl">Baltic Bloom</span>
-        <button id="menu-close" aria-label="Close menu">âœ•</button>
+        <button id="menu-close" aria-label="Close menu">✕</button>
       </div>
       <nav class="space-y-0">
         <a href="#shop" class="block py-3.5 text-sm uppercase tracking-wide border-b border-border">Shop</a>
@@ -172,7 +173,7 @@
     </div>
   </div>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• HERO â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════════ HERO ═══════════════════ -->
   <section id="shop" class="max-w-page mx-auto">
     <div class="lg:grid lg:grid-cols-[1.2fr_0.8fr] lg:gap-10 lg:items-stretch">
       <!-- Gallery -->
@@ -186,7 +187,7 @@
           </div>
           <div class="relative h-96 sm:h-[28rem] lg:h-[34rem] rounded overflow-hidden bg-white">
             <div class="gallery-slide gallery-slide--packshot is-active absolute inset-0">
-              <img src="assets/hy-01-packshot.jpg" alt="Mugwort Calm Hydrating Toner â€” frosted sage green bottle packshot" width="1600" height="2000" loading="eager" />
+              <img src="assets/hy-01-packshot.jpg" alt="Mugwort Calm Hydrating Toner — frosted sage green bottle packshot" width="1600" height="2000" loading="eager" />
             </div>
             <div class="gallery-slide absolute inset-0">
               <img src="assets/hy-02-texture.jpg" alt="Close-up watery mugwort toner texture swatch" width="1600" height="2000" loading="lazy" />
@@ -198,13 +199,13 @@
               <video src="assets/hy-04-application.mp4" poster="assets/hy-04-application-frame.jpg" autoplay loop muted playsinline aria-label="Models applying the calming toner"></video>
             </div>
             <div class="lg:hidden absolute inset-0 flex justify-between items-center px-2 pointer-events-none">
-              <button class="gallery-prev pointer-events-auto w-10 h-10 bg-white/80 rounded-full" aria-label="Previous">â€¹</button>
-              <button class="gallery-next pointer-events-auto w-10 h-10 bg-white/80 rounded-full" aria-label="Next">â€º</button>
+              <button class="gallery-prev pointer-events-auto w-10 h-10 bg-white/80 rounded-full" aria-label="Previous">‹</button>
+              <button class="gallery-next pointer-events-auto w-10 h-10 bg-white/80 rounded-full" aria-label="Next">›</button>
             </div>
             <div class="hidden lg:flex absolute bottom-4 left-1/2 -translate-x-1/2 items-center gap-4 bg-white/95 px-4 py-2 rounded-full shadow border border-border text-sm">
-              <button class="gallery-prev" aria-label="Previous">â€¹</button>
+              <button class="gallery-prev" aria-label="Previous">‹</button>
               <span id="gallery-count">1/4</span>
-              <button class="gallery-next" aria-label="Next">â€º</button>
+              <button class="gallery-next" aria-label="Next">›</button>
             </div>
           </div>
         </div>
@@ -217,14 +218,14 @@
             <span class="w-1.5 h-1.5 bg-mint-dark rounded-full"></span> Calm
           </span>
           <span class="flex items-center gap-2 text-[1.05rem] text-dark">
-            <span class="text-gold tracking-tight">â˜…â˜…â˜…â˜…</span><span class="text-gold/40">â˜…</span>
+            <span class="text-gold tracking-tight">★★★★</span><span class="text-gold/40">★</span>
             <a href="#reviews" class="font-medium underline-offset-2 hover:underline">4.6 (120 reviews)</a>
           </span>
         </div>
 
         <h1 class="font-display text-[2.15rem] lg:text-[clamp(2.5rem,3.2vw,3.75rem)] font-light leading-[1.12] mb-3">Mugwort Calm Hydrating Toner</h1>
         <p class="text-[1.08rem] lg:text-[1.2rem] leading-relaxed text-dark mb-4">A multi-tasking daily toner that does it all. It delivers lasting hydration without heaviness, soothes sensitivity, and smooths skin texture while reinforcing the skin barrier with every use.</p>
-        <p class="text-[1rem] text-dark mb-5">Powered by <strong>Artemisia-Cicaâ„¢</strong>.</p>
+        <p class="text-[1rem] text-dark mb-5">Powered by <strong>Artemisia-Cica™</strong>.</p>
 
         <div class="flex flex-wrap items-center mb-6 border-0">
           <span class="text-[0.78rem] uppercase tracking-[0.12em] text-muted pr-4">Calm</span>
@@ -233,9 +234,9 @@
           <span class="text-[0.78rem] uppercase tracking-[0.12em] text-muted pl-4 border-l border-[#d0d0d0]">Strengthen</span>
         </div>
 
-        <p class="text-[1.2rem] lg:text-[1.45rem] font-medium mb-5">â‚¬24,90</p>
+        <p class="text-[1.2rem] lg:text-[1.45rem] font-medium mb-5">€24,90</p>
 
-        <button class="w-full min-h-[52px] bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium hover:bg-mint-dark transition mb-1">Add to Bag â€” â‚¬24,90</button>
+        <button class="w-full min-h-[52px] bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium hover:bg-mint-dark transition mb-1">Add to Bag — €24,90</button>
 
         <!-- Accordions -->
         <details class="border-t border-ink group" open>
@@ -286,14 +287,14 @@
             <div class="w-16 h-16 rounded-sm shrink-0 overflow-hidden"><img src="assets/hy-20-routine-cleanser.jpg" alt="Balancing Cream Cleanser" class="media-cover" width="64" height="64" loading="lazy" /></div>
             <div>
               <strong class="block text-[0.95rem]">Balancing Cream Cleanser</strong>
-              <span class="text-[0.9rem] text-muted">Gentle, clarifying cream-to-foam cleanser Â· â‚¬32,00</span>
+              <span class="text-[0.9rem] text-muted">Gentle, clarifying cream-to-foam cleanser · €32,00</span>
             </div>
           </a>
           <a href="#" class="flex gap-3 items-center py-2 border-t border-border text-inherit no-underline">
             <div class="w-16 h-16 rounded-sm shrink-0 overflow-hidden"><img src="assets/hy-19-routine-serum.jpg" alt="Artemisia Calming Serum" class="media-cover" width="64" height="64" loading="lazy" /></div>
             <div>
               <strong class="block text-[0.95rem]">Artemisia Calming Serum</strong>
-              <span class="text-[0.9rem] text-muted">Soothing barrier serum Â· â‚¬48,00</span>
+              <span class="text-[0.9rem] text-muted">Soothing barrier serum · €48,00</span>
             </div>
           </a>
         </div>
@@ -302,12 +303,12 @@
         <div class="mt-6 grid lg:grid-cols-[38%_62%] bg-champagne border border-border rounded-sm overflow-hidden min-h-[12rem]">
           <div class="min-h-[10rem] relative"><img src="assets/hy-05-quote.jpg" alt="Serene product lifestyle for customer testimonial" class="media-cover" width="400" height="320" loading="lazy" /></div>
           <div class="p-5 flex flex-col justify-center">
-            <p class="font-display italic text-[1.2rem] lg:text-[1.35rem] leading-snug mb-3">"This gives me everything I want â€” deep hydration without weight. My redness calms within minutes and my skin feels spa-soft all day."</p>
-            <span class="text-sm text-muted -rotate-2 inline-block">â€” Verified Customer, Sensitive Skin</span>
+            <p class="font-display italic text-[1.2rem] lg:text-[1.35rem] leading-snug mb-3">"This gives me everything I want — deep hydration without weight. My redness calms within minutes and my skin feels spa-soft all day."</p>
+            <span class="text-sm text-muted -rotate-2 inline-block">— Verified Customer, Sensitive Skin</span>
           </div>
         </div>
 
-        <button class="w-full min-h-[52px] mt-6 bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium hover:bg-mint-dark transition lg:hidden">Add to Bag â€” â‚¬24,90</button>
+        <button class="w-full min-h-[52px] mt-6 bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium hover:bg-mint-dark transition lg:hidden">Add to Bag — €24,90</button>
       </div>
     </div>
   </section>
@@ -315,29 +316,29 @@
   <!-- Chapter nav trigger (mobile) -->
   <div class="fixed bottom-5 left-4 z-40 lg:hidden">
     <button id="chapters-toggle-m" class="bg-white shadow-lg px-4 py-2.5 text-sm uppercase tracking-wide flex items-center gap-2 rounded">
-      <span>chapters</span> â–¾
+      <span>chapters</span> ▾
     </button>
   </div>
   <div id="chapters-menu" class="fixed inset-0 z-[85] pointer-events-none">
     <div id="chapters-bg" class="absolute inset-0 bg-black/30 opacity-0 transition-opacity"></div>
     <div id="chapters-panel" class="chapters-panel absolute bottom-0 left-0 right-0 lg:bottom-8 lg:left-8 lg:right-auto lg:w-40 bg-white p-6 lg:p-4 rounded-t-lg lg:rounded shadow-xl flex flex-col gap-2 text-sm uppercase">
-      <a href="#shop">Shop</a><a href="#benefits">The benefits</a><a href="#results">The results</a><a href="#science">Artemisia-Cicaâ„¢</a><a href="#ingredients">Key ingredients</a><a href="#community">Community</a><a href="#faq">FAQ</a><a href="#routine">Complete the routine</a>
+      <a href="#shop">Shop</a><a href="#benefits">The benefits</a><a href="#results">The results</a><a href="#science">Artemisia-Cica™</a><a href="#ingredients">Key ingredients</a><a href="#community">Community</a><a href="#faq">FAQ</a><a href="#routine">Complete the routine</a>
     </div>
   </div>
 
-  <!-- Brand video â€” 16:9 -->
+  <!-- Brand video — 16:9 -->
   <section class="brand-video-section border-y" aria-label="Artemisia Soothing Toner film">
     <div class="brand-video-wrap">
-      <video class="brand-video" src="assets/hy-08-brand-film.mp4" poster="assets/hy-08-brand-film-frame.jpg" autoplay muted loop playsinline preload="auto" aria-label="Serene skincare ritual â€” Artemisia Soothing Toner"></video>
+      <video class="brand-video" src="assets/hy-08-brand-film.mp4" poster="assets/hy-08-brand-film-frame.jpg" autoplay muted loop playsinline preload="auto" aria-label="Serene skincare ritual — Artemisia Soothing Toner"></video>
       <div class="brand-video-overlay">
-        <p class="brand-video-eyebrow">Artemisia Cicaâ„¢</p>
+        <p class="brand-video-eyebrow">Artemisia Cica™</p>
         <h2 class="brand-video-title">Artemisia Soothing Toner</h2>
-        <p class="brand-video-sub">Baltic Bloom â€” Calm Â· Hydrate Â· Soothe</p>
+        <p class="brand-video-sub">Baltic Bloom — Calm · Hydrate · Soothe</p>
       </div>
     </div>
   </section>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• LARGE BENEFITS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════════ LARGE BENEFITS ═══════════════════ -->
   <section id="benefits" class="bg-white py-16 lg:py-24">
     <div class="max-w-page mx-auto px-4 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -358,9 +359,9 @@
             </div>
           </div>
           <div class="flex items-center gap-4 mt-8">
-            <button class="benefit-prev w-10 h-10 border border-border rounded-full" aria-label="Previous benefit">â€¹</button>
+            <button class="benefit-prev w-10 h-10 border border-border rounded-full" aria-label="Previous benefit">‹</button>
             <span id="benefit-count" class="text-sm tracking-wider">1/3</span>
-            <button class="benefit-next w-10 h-10 border border-border rounded-full" aria-label="Next benefit">â€º</button>
+            <button class="benefit-next w-10 h-10 border border-border rounded-full" aria-label="Next benefit">›</button>
           </div>
         </div>
         <div class="aspect-[4/5] rounded-sm overflow-hidden border border-border">
@@ -370,7 +371,7 @@
     </div>
   </section>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• THE RESULTS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════════ THE RESULTS ═══════════════════ -->
   <section id="results" class="bg-stone py-16 lg:py-24">
     <div class="max-w-page mx-auto px-4 lg:px-8">
       <p class="text-xs font-semibold uppercase tracking-[0.2em] text-center mb-3">The Results</p>
@@ -396,9 +397,9 @@
             </div>
           </div>
           <div class="flex items-center gap-4 mt-8">
-            <button class="result-prev w-10 h-10 border border-border rounded-full bg-white" aria-label="Previous">â€¹</button>
+            <button class="result-prev w-10 h-10 border border-border rounded-full bg-white" aria-label="Previous">‹</button>
             <span id="result-count" class="text-sm">1/3</span>
-            <button class="result-next w-10 h-10 border border-border rounded-full bg-white" aria-label="Next">â€º</button>
+            <button class="result-next w-10 h-10 border border-border rounded-full bg-white" aria-label="Next">›</button>
           </div>
         </div>
 
@@ -406,10 +407,10 @@
         <div class="space-y-4">
           <div class="ba-slider relative aspect-[4/3] rounded-sm overflow-hidden border border-border" data-ba>
             <div class="ba-layer ba-before absolute inset-0">
-              <img src="assets/hy-09-ba1-before.jpg" alt="Before â€” visible redness and dryness" width="800" height="600" loading="lazy" data-ba-before />
+              <img src="assets/hy-09-ba1-before.jpg" alt="Before — visible redness and dryness" width="800" height="600" loading="lazy" data-ba-before />
             </div>
             <div class="ba-after ba-layer absolute inset-0">
-              <img src="assets/hy-09-ba1-after.jpg" alt="After 4 weeks â€” calmer, more hydrated skin" width="800" height="600" loading="lazy" data-ba-after />
+              <img src="assets/hy-09-ba1-after.jpg" alt="After 4 weeks — calmer, more hydrated skin" width="800" height="600" loading="lazy" data-ba-after />
             </div>
             <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-4 right-4 z-10 ba-range" aria-label="Compare before and after" />
             <div class="absolute top-3 left-3 text-[0.65rem] uppercase tracking-wider bg-white/90 px-2 py-1">Before</div>
@@ -420,7 +421,7 @@
             <button class="ba-pair-btn w-2.5 h-2.5 rounded-full bg-border" data-pair="1" aria-label="Results pair 2"></button>
             <button class="ba-pair-btn w-2.5 h-2.5 rounded-full bg-border" data-pair="2" aria-label="Results pair 3"></button>
           </div>
-          <p class="text-sm text-muted text-center">4-week consumer study â€” hydration, redness &amp; texture improvement.</p>
+          <p class="text-sm text-muted text-center">4-week consumer study — hydration, redness &amp; texture improvement.</p>
         </div>
       </div>
     </div>
@@ -429,7 +430,7 @@
   <!-- Trial modal -->
   <div id="trial-modal" class="modal fixed inset-0 z-[120] items-center justify-center p-4 bg-black/50">
     <div class="bg-white max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 rounded-sm relative">
-      <button class="modal-close absolute top-4 right-4 text-2xl" aria-label="Close">Ã—</button>
+      <button class="modal-close absolute top-4 right-4 text-2xl" aria-label="Close">×</button>
       <h3 class="font-display text-2xl mb-6">Full Trial Results</h3>
       <p class="text-xs uppercase tracking-wider text-muted mb-4">Clinically Proven Results*</p>
       <div class="space-y-6 text-sm leading-relaxed text-dark">
@@ -449,12 +450,12 @@
           <p>71% improvement in skin texture and smoothness</p>
           <p>88% noticed makeup applies more evenly</p>
         </div>
-        <p class="text-xs text-muted italic">*In a 4-week consumer perception study of 80 participants, ages 18â€“45, with self-perceived sensitive, redness-prone skin.</p>
+        <p class="text-xs text-muted italic">*In a 4-week consumer perception study of 80 participants, ages 18–45, with self-perceived sensitive, redness-prone skin.</p>
       </div>
     </div>
   </div>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• BREAKTHROUGH SCIENCE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════════ BREAKTHROUGH SCIENCE ═══════════════════ -->
   <section id="science" class="relative bg-mint-dark text-white py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0 opacity-30"><img src="assets/hy-12-science.jpg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
     <div class="absolute inset-0 bg-mint-dark/75"></div>
@@ -464,8 +465,8 @@
       </div>
       <div>
         <p class="text-xs uppercase tracking-[0.2em] text-mint mb-4">Breakthrough Science</p>
-        <h2 class="font-display text-4xl lg:text-6xl font-light mb-6">Artemisia-Cicaâ„¢</h2>
-        <p class="text-lg text-white/85 leading-relaxed mb-8">Baltic Bloom is powered by Artemisia-Cicaâ„¢, a proprietary complex tailored for sensitized, barrier-compromised skin. It delivers soothing signals in a measured way and promotes the skin's natural health by supporting its barrier and enhancing long-term resilience.</p>
+        <h2 class="font-display text-4xl lg:text-6xl font-light mb-6">Artemisia-Cica™</h2>
+        <p class="text-lg text-white/85 leading-relaxed mb-8">Baltic Bloom is powered by Artemisia-Cica™, a proprietary complex tailored for sensitized, barrier-compromised skin. It delivers soothing signals in a measured way and promotes the skin's natural health by supporting its barrier and enhancing long-term resilience.</p>
         <a href="#" class="inline-flex min-h-[48px] items-center px-8 border border-white text-sm uppercase tracking-wider hover:bg-white hover:text-ink transition">Learn More</a>
       </div>
     </div>
@@ -480,7 +481,7 @@
     </div>
   </section>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• KEY INGREDIENTS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════════ KEY INGREDIENTS ═══════════════════ -->
   <section id="ingredients" class="py-16 lg:py-24 bg-offwhite" style="background:#faf8f5">
     <div class="max-w-page mx-auto px-4 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
@@ -491,7 +492,7 @@
           <h2 class="font-display text-3xl lg:text-5xl font-light mb-8">Key Ingredients</h2>
           <details class="border-t border-ink py-4 group" open>
             <summary class="flex justify-between cursor-pointer list-none font-display text-xl"><span>Ganghwa Artemisia Water</span><span class="acc-icon text-muted">+</span></summary>
-            <p class="pt-3 text-dark leading-relaxed">Traditional Korean mugwort harvested on Ganghwa Island â€” revered for calming visible redness and balancing reactive skin.</p>
+            <p class="pt-3 text-dark leading-relaxed">Traditional Korean mugwort harvested on Ganghwa Island — revered for calming visible redness and balancing reactive skin.</p>
           </details>
           <details class="border-t border-ink py-4 group">
             <summary class="flex justify-between cursor-pointer list-none font-display text-xl"><span>Centella Asiatica</span><span class="acc-icon text-muted">+</span></summary>
@@ -499,7 +500,7 @@
           </details>
           <details class="border-t border-ink py-4 group">
             <summary class="flex justify-between cursor-pointer list-none font-display text-xl"><span>Panthenol + Glycerin</span><span class="acc-icon text-muted">+</span></summary>
-            <p class="pt-3 text-dark leading-relaxed">Draws water into skin without a waxy film â€” essential humectants for a lightweight, calming facial toner.</p>
+            <p class="pt-3 text-dark leading-relaxed">Draws water into skin without a waxy film — essential humectants for a lightweight, calming facial toner.</p>
           </details>
           <details class="border-t border-ink py-4 group">
             <summary class="flex justify-between cursor-pointer list-none font-display text-xl"><span>Lactobacillus Ferment</span><span class="acc-icon text-muted">+</span></summary>
@@ -551,7 +552,7 @@
     </div>
   </section>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FAQ â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════════ FAQ ═══════════════════ -->
   <section id="faq" class="py-16 lg:py-24 bg-stone">
     <div class="max-w-page mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-10">
       <div class="aspect-[4/5] rounded-sm hidden lg:block overflow-hidden border border-border">
@@ -561,23 +562,23 @@
         <h2 class="font-display text-3xl lg:text-5xl font-light mb-8">FAQs</h2>
         <details class="border-t border-ink py-4 group">
           <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>Where does this fit in my daily routine?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
-          <p class="pt-3 text-dark leading-relaxed">Use immediately after cleansing, before serum and moisturizer â€” morning and night. It preps skin and locks in hydration without heaviness.</p>
+          <p class="pt-3 text-dark leading-relaxed">Use immediately after cleansing, before serum and moisturizer — morning and night. It preps skin and locks in hydration without heaviness.</p>
         </details>
         <details class="border-t border-ink py-4 group">
           <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>Which skin types is it suitable for?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
-          <p class="pt-3 text-dark leading-relaxed">Designed for all skin types â€” including sensitive, reactive, and acne-prone. Non-comedogenic and tested on diverse skin needs.</p>
+          <p class="pt-3 text-dark leading-relaxed">Designed for all skin types — including sensitive, reactive, and acne-prone. Non-comedogenic and tested on diverse skin needs.</p>
         </details>
         <details class="border-t border-ink py-4 group">
           <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>Has it undergone testing?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
-          <p class="pt-3 text-dark leading-relaxed">Yes. Dermatologist-tested with independent consumer studies. 4.6â˜… average from 120 verified reviews.</p>
+          <p class="pt-3 text-dark leading-relaxed">Yes. Dermatologist-tested with independent consumer studies. 4.6★ average from 120 verified reviews.</p>
         </details>
         <details class="border-t border-ink py-4 group">
           <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>Is it vegan and fragrance-free?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
           <p class="pt-3 text-dark leading-relaxed">Yes. Vegan, fragrance-free, and formulated without sulfates, parabens, or mineral oil. Light natural mugwort note only.</p>
         </details>
         <details class="border-t border-b border-ink py-4 group">
-          <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>What is Artemisia-Cicaâ„¢ and how does it work?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
-          <p class="pt-3 text-dark leading-relaxed">A proprietary complex combining Ganghwa mugwort water and centella asiatica. Mugwort delivers instant soothing signals; centella supports barrier recovery over time â€” measured, not diluted across dozens of actives.</p>
+          <summary class="flex justify-between cursor-pointer list-none text-base uppercase tracking-wide pr-4"><span>What is Artemisia-Cica™ and how does it work?</span><span class="acc-icon shrink-0 ml-4">+</span></summary>
+          <p class="pt-3 text-dark leading-relaxed">A proprietary complex combining Ganghwa mugwort water and centella asiatica. Mugwort delivers instant soothing signals; centella supports barrier recovery over time — measured, not diluted across dozens of actives.</p>
         </details>
         <a href="#" class="inline-block mt-6 text-sm uppercase tracking-wider underline">Read all FAQs</a>
       </div>
@@ -596,7 +597,7 @@
           </div>
           <h3 class="font-display text-xl mb-1">Balancing Cream Cleanser</h3>
           <p class="text-sm text-muted mb-2">Gentle, clarifying cream-to-foam cleanser</p>
-          <p class="font-medium mb-4">â‚¬32,00</p>
+          <p class="font-medium mb-4">€32,00</p>
           <button class="min-h-[44px] px-6 border border-ink text-xs uppercase tracking-wider hover:bg-ink hover:text-white transition">Quick Shop</button>
         </article>
         <article class="text-center group">
@@ -606,7 +607,7 @@
           </div>
           <h3 class="font-display text-xl mb-1">Artemisia Calming Serum</h3>
           <p class="text-sm text-muted mb-2">Barrier-supporting soothing serum</p>
-          <p class="font-medium mb-4">â‚¬48,00</p>
+          <p class="font-medium mb-4">€48,00</p>
           <button class="min-h-[44px] px-6 border border-ink text-xs uppercase tracking-wider hover:bg-ink hover:text-white transition">Quick Shop</button>
         </article>
         <article class="text-center group">
@@ -616,21 +617,21 @@
           </div>
           <h3 class="font-display text-xl mb-1">Mugwort Calm Hydrating Toner</h3>
           <p class="text-sm text-muted mb-2">Lightweight soothing facial toner</p>
-          <p class="font-medium mb-4">â‚¬24,90</p>
+          <p class="font-medium mb-4">€24,90</p>
           <button class="min-h-[44px] px-6 bg-ink text-white text-xs uppercase tracking-wider hover:bg-mint-dark transition">Add to Bag</button>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• REVIEWS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════════════ REVIEWS ═══════════════════ -->
   <section id="reviews" class="py-16 lg:py-24 bg-cream border-t border-border">
     <div class="max-w-page mx-auto px-4 lg:px-8">
       <p class="mb-2"><strong>Overall rating:</strong> 4.6 / 5 from 120 reviews.</p>
 
       <div class="grid lg:grid-cols-2 gap-10 mb-12">
         <div>
-          <h3 class="font-display text-xl mb-3">AI Generated Review Summary</h3>
+          <h3 class="font-display text-xl mb-3">Review Summary</h3>
           <p class="text-dark leading-relaxed mb-6">Mugwort Calm Hydrating Toner is a highly regarded soothing facial toner that delivers weightless hydration and visible calm. Its watery texture is deeply appreciated by customers with sensitive skin, offering moisture without stickiness or stinging.</p>
           <h4 class="text-sm uppercase tracking-wider mb-2">Summary topics</h4>
           <ul class="text-sm text-dark space-y-1 mb-4">
@@ -638,14 +639,14 @@
             <li>Hydration & Calm: 31%</li>
             <li>Sensitive skin: 18%</li>
           </ul>
-          <p class="text-xs text-muted">Review topics: ["redness","sensitive","texture","toner","calm"]</p>
+          <p class="text-xs text-muted">Most mentioned: redness relief, sensitive skin, lightweight texture, daily calm</p>
         </div>
         <div>
           <h3 class="font-display text-xl mb-4">Review highlights</h3>
           <ul class="space-y-4 text-dark">
-            <li class="italic">"Finally a toner that doesn't sting. My cheeks look calmer by morning." â€” Elena K.</li>
-            <li class="italic">"I layer it three times â€” plump skin, zero stickiness." â€” Amy C.</li>
-            <li class="italic">"Replaced my essence and toner in one step. Makeup sits better." â€” Sarah M.</li>
+            <li class="italic">"Finally a toner that doesn't sting. My cheeks look calmer by morning." — Elena K.</li>
+            <li class="italic">"I layer it three times — plump skin, zero stickiness." — Amy C.</li>
+            <li class="italic">"Replaced my essence and toner in one step. Makeup sits better." — Sarah M.</li>
           </ul>
         </div>
       </div>
@@ -654,33 +655,33 @@
       <div class="space-y-8 max-w-3xl">
         <article class="border-b border-border pb-8">
           <h4 class="font-semibold mb-2">Holy grail for reactive skin</h4>
-          <p class="text-gold text-sm mb-2">â˜…â˜…â˜…â˜…â˜…</p>
-          <p class="text-dark leading-relaxed mb-3">"The texture is incredible â€” so light and watery without feeling like nothing. I use it after cleansing morning and night. My redness visibly calms within minutes and my skin feels balanced all day. Officially my forever toner."</p>
-          <p class="text-sm text-muted">â€” Claire P.</p>
+          <p class="text-gold text-sm mb-2">★★★★★</p>
+          <p class="text-dark leading-relaxed mb-3">"The texture is incredible — so light and watery without feeling like nothing. I use it after cleansing morning and night. My redness visibly calms within minutes and my skin feels balanced all day. Officially my forever toner."</p>
+          <p class="text-sm text-muted">— Claire P.</p>
         </article>
         <article class="border-b border-border pb-8">
           <h4 class="font-semibold mb-2">Perfect for oily-sensitive combo</h4>
-          <p class="text-gold text-sm mb-2">â˜…â˜…â˜…â˜…â˜…</p>
+          <p class="text-gold text-sm mb-2">★★★★★</p>
           <p class="text-dark leading-relaxed mb-3">"A little goes a long way. I have oily, reactive skin and this hydrates without breakouts or grease. Exactly what I needed between cleanser and serum."</p>
-          <p class="text-sm text-muted">â€” Zinet M.</p>
+          <p class="text-sm text-muted">— Zinet M.</p>
         </article>
         <article class="border-b border-border pb-8">
           <h4 class="font-semibold mb-2">Sensitive skin approved</h4>
-          <p class="text-gold text-sm mb-2">â˜…â˜…â˜…â˜…â˜…</p>
-          <p class="text-dark leading-relaxed mb-3">"I have very sensitive skin and most toners make me flare up. This one didn't. Visible results in a few weeks â€” calmer, more even tone. Already repurchased."</p>
-          <p class="text-sm text-muted">â€” Krista E.</p>
+          <p class="text-gold text-sm mb-2">★★★★★</p>
+          <p class="text-dark leading-relaxed mb-3">"I have very sensitive skin and most toners make me flare up. This one didn't. Visible results in a few weeks — calmer, more even tone. Already repurchased."</p>
+          <p class="text-sm text-muted">— Krista E.</p>
         </article>
         <article class="border-b border-border pb-8">
           <h4 class="font-semibold mb-2">Lightweight luxury</h4>
-          <p class="text-gold text-sm mb-2">â˜…â˜…â˜…â˜…â˜…</p>
-          <p class="text-dark leading-relaxed mb-3">"Amazing texture â€” hydration without any heaviness. Perfect base under makeup. The frosted bottle looks beautiful on my shelf too."</p>
-          <p class="text-sm text-muted">â€” Gabriel L.</p>
+          <p class="text-gold text-sm mb-2">★★★★★</p>
+          <p class="text-dark leading-relaxed mb-3">"Amazing texture — hydration without any heaviness. Perfect base under makeup. The frosted bottle looks beautiful on my shelf too."</p>
+          <p class="text-sm text-muted">— Gabriel L.</p>
         </article>
         <article>
           <h4 class="font-semibold mb-2">Calm, not compromise</h4>
-          <p class="text-gold text-sm mb-2">â˜…â˜…â˜…â˜…â˜†</p>
-          <p class="text-dark leading-relaxed mb-3">"Leaves my skin moisturised but never greasy. I layer twice on dry days â€” the 7-skin method works beautifully with this formula."</p>
-          <p class="text-sm text-muted">â€” Ashley B.</p>
+          <p class="text-gold text-sm mb-2">★★★★☆</p>
+          <p class="text-dark leading-relaxed mb-3">"Leaves my skin moisturised but never greasy. I layer twice on dry days — the 7-skin method works beautifully with this formula."</p>
+          <p class="text-sm text-muted">— Ashley B.</p>
         </article>
       </div>
     </div>
@@ -693,15 +694,15 @@
       <div class="bb-footer__masthead">
         <div class="bb-footer__brand">
           <p class="bb-footer__eyebrow">Baltic Bloom</p>
-          <h2 class="bb-footer__wordmark font-display">Artemisia-Cicaâ„¢ Science</h2>
-          <p class="bb-footer__tagline">Holistic Baltic skincare for sensitive, barrier-focused skin â€” thoughtfully formulated with ganghwa mugwort and centella.</p>
+          <h2 class="bb-footer__wordmark font-display">Artemisia-Cica™ Science</h2>
+          <p class="bb-footer__tagline">Holistic Baltic skincare for sensitive, barrier-focused skin — thoughtfully formulated with ganghwa mugwort and centella.</p>
         </div>
         <div class="bb-footer__newsletter">
           <div class="bb-footer__newsletter-head">
             <h3>Sign up for news &amp; exclusive stories</h3>
             <p>Exclusive rituals, new releases &amp; science notes. No spam, ever.</p>
           </div>
-          <form class="bb-newsletter" onsubmit="event.preventDefault(); alert('Newsletter signup â€” preview only.');">
+          <form class="bb-newsletter" onsubmit="event.preventDefault(); this.querySelector('.bb-newsletter__submit').textContent='Subscribed';">
             <div class="bb-newsletter__row">
               <label class="sr-only" for="footer-email">Email address</label>
               <input id="footer-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email" />
@@ -749,7 +750,7 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
             </a>
           </div>
-          <p class="bb-footer__trust" style="margin-top:1rem;font-size:0.72rem;color:rgba(255,255,255,0.45)">Vegan Â· Cruelty-free Â· Dermatologist tested</p>
+          <p class="bb-footer__trust" style="margin-top:1rem;font-size:0.72rem;color:rgba(255,255,255,0.45)">Vegan · Cruelty-free · Dermatologist tested</p>
         </div>
       </div>
 
@@ -782,7 +783,7 @@
 
       <div class="bb-footer__bottom">
         <div class="bb-footer__legal">
-          <span>Â© 2026 Baltic Bloom</span>
+          <span>© 2026 Baltic Bloom</span>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
           <a href="#">Shipping Policy</a>
@@ -792,13 +793,13 @@
           <div class="bb-locale-wrap">
             <button type="button" class="bb-locale-btn" id="region-toggle" aria-expanded="false" aria-haspopup="listbox">
               <svg width="14" height="10" viewBox="0 0 14 10" aria-hidden="true"><rect width="14" height="10" fill="#003399"/><g fill="#FFCC00"><circle cx="7" cy="5" r="2.2"/></g></svg>
-              <span class="bb-locale-label">EU Â· EUR</span>
+              <span class="bb-locale-label">EU · EUR</span>
             </button>
             <div class="bb-locale-panel" id="region-panel" role="listbox">
-              <button type="button" data-region="EU Â· EUR">EU Â· EUR</button>
-              <button type="button" data-region="GB Â· GBP">United Kingdom Â· GBP</button>
-              <button type="button" data-region="US Â· USD">United States Â· USD</button>
-              <button type="button" data-region="EE Â· EUR">Estonia Â· EUR</button>
+              <button type="button" data-region="EU · EUR">EU · EUR</button>
+              <button type="button" data-region="GB · GBP">United Kingdom · GBP</button>
+              <button type="button" data-region="US · USD">United States · USD</button>
+              <button type="button" data-region="EE · EUR">Estonia · EUR</button>
             </div>
           </div>
           <div class="bb-locale-wrap">
@@ -810,7 +811,7 @@
               <button type="button" data-lang="English">English</button>
               <button type="button" data-lang="Eesti">Eesti</button>
               <button type="button" data-lang="Deutsch">Deutsch</button>
-              <button type="button" data-lang="FranÃ§ais">FranÃ§ais</button>
+              <button type="button" data-lang="Français">Français</button>
             </div>
           </div>
         </div>
@@ -821,7 +822,7 @@
   <!-- Sticky ATC -->
   <div id="sticky-atc" class="sticky-atc fixed bottom-0 left-0 right-0 z-40 bg-stone rounded-t-lg p-3 lg:flex lg:justify-end border-t border-border">
     <div class="max-w-page mx-auto w-full lg:flex lg:justify-end">
-      <button class="w-full lg:max-w-[22rem] min-h-[52px] bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium">Add to Bag â€” â‚¬24,90</button>
+      <button class="w-full lg:max-w-[22rem] min-h-[52px] bg-ink text-white text-[0.82rem] uppercase tracking-[0.1em] font-medium">Add to Bag — €24,90</button>
     </div>
   </div>
 
@@ -855,9 +856,9 @@
 
     // Before/after pairs
     const baPairs = [
-      { before: 'assets/hy-09-ba1-before.jpg', after: 'assets/hy-09-ba1-after.jpg', bAlt: 'Before â€” visible redness', aAlt: 'After â€” calmer hydrated skin' },
-      { before: 'assets/hy-10-ba2-before.jpg', after: 'assets/hy-10-ba2-after.jpg', bAlt: 'Before â€” uneven texture', aAlt: 'After â€” smoother skin texture' },
-      { before: 'assets/hy-11-ba3-before.jpg', after: 'assets/hy-11-ba3-after.jpg', bAlt: 'Before â€” dehydrated irritated skin', aAlt: 'After â€” supple even-toned skin' },
+      { before: 'assets/hy-09-ba1-before.jpg', after: 'assets/hy-09-ba1-after.jpg', bAlt: 'Before — visible redness', aAlt: 'After — calmer hydrated skin' },
+      { before: 'assets/hy-10-ba2-before.jpg', after: 'assets/hy-10-ba2-after.jpg', bAlt: 'Before — uneven texture', aAlt: 'After — smoother skin texture' },
+      { before: 'assets/hy-11-ba3-before.jpg', after: 'assets/hy-11-ba3-after.jpg', bAlt: 'Before — dehydrated irritated skin', aAlt: 'After — supple even-toned skin' },
     ];
     const baBefore = document.querySelector('[data-ba-before]');
     const baAfter = document.querySelector('[data-ba-after]');
@@ -921,7 +922,7 @@
     const shop = document.getElementById('shop');
     if (sticky && shop) new IntersectionObserver(([e]) => sticky.classList.toggle('is-visible', !e.isIntersecting), { threshold: 0 }).observe(shop);
 
-    // Brand film â€” ensure playback (H.264; poster-only = codec mismatch before re-encode)
+    // Brand film autoplay
     const brandVideo = document.querySelector('.brand-video');
     if (brandVideo) {
       brandVideo.muted = true;
