@@ -4,28 +4,30 @@
 
 A premium e-commerce product landing page for **Mugwort Calm Hydrating Toner** by Baltic Bloom — a fictional clean-beauty brand created as a portfolio piece.
 
-## About the Project
+## About
 
-This single-page experience demonstrates conversion-focused layout and editorial design for high-end skincare: hero product gallery, brand film, benefits carousel, clinical results with before/after comparison, ingredient science, community content, FAQ, customer reviews, and a full storefront-style footer.
+Single-page product experience built for high-end skincare: hero gallery, brand film, benefits carousel, clinical results with before/after comparison, ingredient science, community content, FAQ, customer reviews, and a conversion-oriented footer.
 
-The aesthetic follows a calm, minimal European clean-beauty direction — sage greens, warm cream tones, serif display typography, and generous whitespace.
+Calm editorial aesthetic — sage greens, warm cream tones, serif display type, and generous whitespace.
 
 ## Tech Stack
 
-- HTML5
-- Tailwind CSS (CDN)
-- Vanilla JavaScript
-- Google Fonts — Playfair Display & Jost
+| Layer | Tools |
+|-------|-------|
+| Markup | HTML5 |
+| Styling | Tailwind CSS (CDN) |
+| Interactivity | Vanilla JavaScript |
+| Typography | Google Fonts — Playfair Display & Jost |
 
-## Features
+## Highlights
 
 - Responsive product gallery with image and video slides
-- Sticky add-to-cart bar on scroll
+- Sticky add-to-cart on scroll
 - Interactive before/after results slider
 - Accordion sections for benefits, usage, and ingredients
 - Autoplay brand film and community video modules
-- Accessible navigation with mobile drawer and chapter menu
+- Mobile drawer and floating chapter navigation
 
 ## Note
 
-This is a design portfolio demonstration. Baltic Bloom and all product copy are fictional. No live checkout or backend is connected.
+Portfolio demonstration only. Baltic Bloom and all product copy are fictional. No live checkout or backend is connected.
